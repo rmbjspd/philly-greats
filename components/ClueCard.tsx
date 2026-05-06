@@ -1,13 +1,45 @@
 'use client'
 
 import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 import { PuzzleClue, ClueState } from '@/types/game'
-import LetterBoxes from './LetterBoxes'
 import { cn } from '@/lib/utils'
 
 const MAX_GUESSES = 6
+const BOX = 28   // px
+const GAP = 3    // px
+const SLOT = BOX + GAP  // 31px per cell
+
+interface BoxProps {
+  letter?: string
+  highlight?: boolean
+  solved?: boolean
+  revealed?: boolean
+}
+
+function LetterBox({ letter = '', highlight, solved, revealed }: BoxProps) {
+  const done = solved || revealed
+  return (
+    <div
+      style={{ width: BOX, height: BOX, flexShrink: 0 }}
+      className={cn(
+        'flex items-center justify-center border text-[11px] font-bold uppercase tracking-wide',
+        highlight
+          ? done
+            ? solved
+              ? 'border-amber-400 bg-amber-500 text-black'
+              : 'border-zinc-600 bg-zinc-900 text-zinc-500'
+            : 'border-amber-400/50 bg-transparent text-zinc-600'
+          : done
+            ? solved
+              ? 'border-green-800/60 bg-green-900/30 text-green-300'
+              : 'border-zinc-700 bg-zinc-900/50 text-zinc-500'
+            : 'border-zinc-700/60 bg-transparent text-zinc-600'
+      )}
+    >
+      {letter}
+    </div>
+  )
+}
 
 interface ClueCardProps {
   clue: PuzzleClue
@@ -15,8 +47,8 @@ interface ClueCardProps {
   onGuess: (guess: string) => void
   onReveal: () => void
   answer?: string
-  acrosticChar: 'B' | 'A' | 'R' | 'G'
   disabled: boolean
+  spineColumn: number
 }
 
 export default function ClueCard({
@@ -25,145 +57,139 @@ export default function ClueCard({
   onGuess,
   onReveal,
   answer,
-  acrosticChar,
   disabled,
+  spineColumn,
 }: ClueCardProps) {
   const [input, setInput] = useState('')
-  const [shaking, setShaking] = useState(false)
+  const [shake, setShake] = useState(false)
 
   const canGuess = !state.solved && !state.revealed && !disabled
   const guessesLeft = MAX_GUESSES - state.guesses.length
-  const canGiveUp = canGuess && state.guesses.length < MAX_GUESSES
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    const trimmed = input.trim()
-    if (!trimmed) return
-    if (state.guesses.some((g) => g.toLowerCase() === trimmed.toLowerCase())) {
-      // Already guessed — shake
-      setShaking(true)
-      setTimeout(() => setShaking(false), 500)
+    const g = input.trim()
+    if (!g) return
+    if (state.guesses.some((x) => x.toLowerCase() === g.toLowerCase())) {
+      setShake(true)
+      setTimeout(() => setShake(false), 500)
       return
     }
-    onGuess(trimmed)
+    onGuess(g)
     setInput('')
   }
 
-  const displayWord = answer || ''
-  const currentGuess = canGuess ? input : ''
+  const showAnswer = state.solved || state.revealed
+  const letters = showAnswer && answer ? answer.split('') : []
+
+  const preCt = clue.letter_index
+  const postCt = showAnswer
+    ? Math.max(0, letters.length - clue.letter_index - 1)
+    : Math.max(0, clue.answer_length - clue.letter_index - 1)
+  const spacerCt = spineColumn - preCt
+
+  // pixel offset to the start of the right zone (after highlight)
+  const rightStart = (spacerCt + preCt + 1) * SLOT
 
   return (
-    <div
-      className={cn(
-        'rounded-xl border p-4 bg-[#0f0f23] border-zinc-700 shadow-lg flex flex-col gap-3',
-        shaking && 'animate-[shake_0.5s_ease-in-out]'
-      )}
-    >
-      {/* Header row */}
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex items-center gap-2">
-          <Badge
-            className={cn(
-              'text-base font-bold px-2 py-0.5 rounded',
-              'bg-amber-500 text-black border-amber-400'
-            )}
-          >
-            {acrosticChar}
-          </Badge>
-          {state.solved && (
-            <span className="text-green-400 font-bold text-lg">✓</span>
+    <div className={cn('flex flex-col', shake && 'animate-[shake_0.5s]')}>
+      {/* Main row */}
+      <div className="flex items-center" style={{ gap: GAP }}>
+        {/* Spacers */}
+        {Array.from({ length: spacerCt }).map((_, i) => (
+          <div key={`sp-${i}`} style={{ width: BOX, height: BOX, flexShrink: 0 }} />
+        ))}
+
+        {/* Pre-highlight boxes */}
+        {Array.from({ length: preCt }).map((_, i) => (
+          <LetterBox
+            key={`pre-${i}`}
+            letter={letters[i]}
+            solved={state.solved}
+            revealed={state.revealed}
+          />
+        ))}
+
+        {/* Highlight box */}
+        <LetterBox
+          letter={letters[preCt]}
+          highlight
+          solved={state.solved}
+          revealed={state.revealed}
+        />
+
+        {/* Post-highlight boxes */}
+        {showAnswer &&
+          Array.from({ length: postCt }).map((_, i) => (
+            <LetterBox
+              key={`post-${i}`}
+              letter={letters[preCt + 1 + i]}
+              solved={state.solved}
+              revealed={state.revealed}
+            />
+          ))}
+
+        {/* Clue text */}
+        <span
+          className={cn(
+            'text-sm leading-snug shrink min-w-0',
+            showAnswer
+              ? state.solved
+                ? 'text-zinc-400'
+                : 'text-zinc-600'
+              : 'text-zinc-300'
           )}
-          {state.revealed && (
-            <span className="text-red-400 font-bold text-lg">✗</span>
-          )}
-        </div>
-        {canGuess && (
-          <span className="text-xs text-zinc-400 mt-1">
-            {guessesLeft} guess{guessesLeft !== 1 ? 'es' : ''} left
-          </span>
-        )}
+          style={{ marginLeft: 10 }}
+        >
+          {clue.clue_text}
+        </span>
       </div>
 
-      {/* Clue text */}
-      <p className="text-white text-base leading-snug font-medium">{clue.clue_text}</p>
-
-      {/* Letter boxes */}
-      <LetterBoxes
-        word={displayWord}
-        guess={currentGuess}
-        highlightIndex={clue.letter_index}
-        solved={state.solved}
-        revealed={state.revealed}
-      />
-
-      {/* Previous wrong guesses */}
-      {state.guesses.length > 0 && !state.solved && (
-        <div className="flex flex-wrap gap-1">
-          {state.guesses.map((g, i) => (
-            <span
-              key={i}
-              className="text-xs bg-zinc-800 text-zinc-300 rounded px-2 py-0.5 border border-zinc-600 line-through"
-            >
-              {g}
-            </span>
-          ))}
-        </div>
-      )}
-      {state.solved && state.guesses.length > 1 && (
-        <div className="flex flex-wrap gap-1">
-          {state.guesses.slice(0, -1).map((g, i) => (
-            <span
-              key={i}
-              className="text-xs bg-zinc-800 text-zinc-300 rounded px-2 py-0.5 border border-zinc-600 line-through"
-            >
-              {g}
-            </span>
-          ))}
-        </div>
-      )}
-
-      {/* Input + buttons */}
+      {/* Input zone — aligned under right of highlight */}
       {canGuess && (
-        <form onSubmit={handleSubmit} className="flex gap-2 mt-1">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Type your answer..."
-            className={cn(
-              'flex-1 bg-zinc-800 border border-zinc-600 text-white rounded px-3 py-2 text-sm',
-              'placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400'
+        <div className="mt-2 flex flex-col gap-1" style={{ paddingLeft: rightStart + 10 }}>
+          {state.guesses.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-0.5">
+              {state.guesses.map((g, i) => (
+                <span key={i} className="text-xs text-zinc-700 line-through">
+                  {g}
+                </span>
+              ))}
+            </div>
+          )}
+          <form onSubmit={handleSubmit} className="flex items-center gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="last name"
+              className="bg-transparent border-b border-zinc-700 text-white text-sm py-0.5 w-32 focus:outline-none focus:border-amber-400 placeholder:text-zinc-700 tracking-wide"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck={false}
+            />
+            <button
+              type="submit"
+              disabled={!input.trim()}
+              className="text-zinc-500 hover:text-white disabled:opacity-20 text-base transition-colors leading-none"
+            >
+              →
+            </button>
+            {guessesLeft <= 3 && (
+              <span className="text-xs text-zinc-700">{guessesLeft}</span>
             )}
-            autoComplete="off"
-            autoCorrect="off"
-            autoCapitalize="off"
-            spellCheck={false}
-          />
-          <Button
-            type="submit"
-            disabled={!input.trim()}
-            className="bg-[#E81828] hover:bg-[#c0111f] text-white font-bold px-4"
-          >
-            Go
-          </Button>
-        </form>
-      )}
-
-      {canGiveUp && (
-        <button
-          type="button"
-          onClick={onReveal}
-          className="text-xs text-zinc-500 hover:text-zinc-300 underline text-left w-fit transition-colors"
-        >
-          Give up on this clue
-        </button>
-      )}
-
-      {/* Revealed answer label */}
-      {state.revealed && answer && (
-        <p className="text-sm text-red-400">
-          Answer: <span className="font-bold text-red-300">{answer}</span>
-        </p>
+            {state.guesses.length >= 2 && (
+              <button
+                type="button"
+                onClick={onReveal}
+                className="text-xs text-zinc-700 hover:text-zinc-500 transition-colors ml-1"
+              >
+                reveal
+              </button>
+            )}
+          </form>
+        </div>
       )}
     </div>
   )

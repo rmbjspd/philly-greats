@@ -11,9 +11,7 @@ import {
 import ClueCard from './ClueCard'
 import AcrosticReveal from './AcrosticReveal'
 import StatsModal from './StatsModal'
-import { Button } from '@/components/ui/button'
 
-const ACROSTIC = ['B', 'A', 'R', 'G'] as const
 const MAX_GUESSES = 6
 
 function makeInitialClueState(): ClueState {
@@ -222,28 +220,29 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     answer: answers[i] || '',
   }))
 
+  const spineColumn = Math.max(...puzzle.clues.map((c) => c.letter_index))
+
   return (
-    <div className="w-full max-w-xl mx-auto px-4 pb-8">
+    <div className="w-full max-w-2xl mx-auto px-6 pb-12">
       {/* Header */}
-      <div className="flex items-center justify-between py-4 border-b border-zinc-700 mb-6">
+      <div className="flex items-center justify-between py-5 mb-8">
         <div>
-          <h1 className="text-3xl font-black text-amber-400 tracking-widest">BARG</h1>
-          <p className="text-xs text-zinc-500">{puzzle.puzzle_date}</p>
+          <h1 className="text-2xl font-black text-amber-400 tracking-widest">BARG</h1>
+          <p className="text-xs text-zinc-600 mt-0.5">{puzzle.puzzle_date}</p>
         </div>
-        <Button
-          variant="outline"
+        <button
           onClick={() => {
             setStats(getStats())
             setStatsOpen(true)
           }}
-          className="border-zinc-600 text-zinc-300 hover:text-white hover:bg-zinc-700"
+          className="text-xs text-zinc-600 hover:text-zinc-400 transition-colors tracking-widest uppercase"
         >
-          Stats
-        </Button>
+          stats
+        </button>
       </div>
 
-      {/* Clue cards */}
-      <div className="space-y-4">
+      {/* Clue rows */}
+      <div className="space-y-6">
         {puzzle.clues.map((clue, i) => (
           <ClueCard
             key={clue.id}
@@ -252,8 +251,8 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
             onGuess={(guess) => handleGuess(i, guess)}
             onReveal={() => handleReveal(i)}
             answer={answers[i]}
-            acrosticChar={ACROSTIC[i]}
             disabled={gameState.completed}
+            spineColumn={spineColumn}
           />
         ))}
       </div>

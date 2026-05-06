@@ -1,5 +1,7 @@
-import { cookies } from 'next/headers'
 import { supabaseServer } from '@/lib/supabase'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
@@ -14,34 +16,6 @@ function getTodayET(): string {
 
 function dayName(dateStr: string): string {
   return DAY_NAMES[new Date(dateStr + 'T12:00:00').getDay()]
-}
-
-// ── Login form ────────────────────────────────────────────────────────────────
-
-function LoginPage({ error }: { error: boolean }) {
-  return (
-    <main className="min-h-screen bg-[#1a1a2e] flex items-center justify-center px-4">
-      <div className="max-w-sm w-full rounded-xl border border-zinc-700 bg-[#0f0f23] p-8 shadow-xl">
-        <h1 className="text-2xl font-black text-amber-400 tracking-widest mb-6">BARG Admin</h1>
-        {error && <p className="text-red-400 text-sm mb-4">Wrong password.</p>}
-        <form action="/api/admin/login" method="POST" className="flex flex-col gap-3">
-          <input
-            type="password"
-            name="password"
-            placeholder="Admin password"
-            autoFocus
-            className="rounded-lg bg-zinc-800 border border-zinc-600 text-white px-4 py-2 text-sm focus:outline-none focus:border-amber-400"
-          />
-          <button
-            type="submit"
-            className="rounded-lg bg-[#E81828] hover:bg-[#c0111f] text-white font-semibold py-2 text-sm transition-colors"
-          >
-            Sign in →
-          </button>
-        </form>
-      </div>
-    </main>
-  )
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -142,10 +116,7 @@ function StatTable({ stats }: { stats: DayStat[] }) {
   if (stats.length === 0) {
     return (
       <div className="rounded-xl border border-zinc-700 bg-[#0f0f23] p-5 text-sm text-zinc-400">
-        No data yet.{' '}
-        <span className="text-amber-400">
-          Run <code>scripts/create-visits-table.sql</code> in Supabase Studio first.
-        </span>
+        No visits logged yet in the last 30 days.
       </div>
     )
   }
@@ -235,19 +206,7 @@ function PuzzleCard({ puzzle, today }: { puzzle: UpcomingPuzzle; today: string }
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-export default async function AdminPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ error?: string }>
-}) {
-  const [cookieStore, params] = await Promise.all([cookies(), searchParams])
-  const adminToken = cookieStore.get('admin_token')
-  const adminSecret = process.env.ADMIN_SECRET
-
-  if (!adminSecret || !adminToken || adminToken.value !== adminSecret) {
-    return <LoginPage error={params.error === '1'} />
-  }
-
+export default async function AdminPage() {
   const today = getTodayET()
   const [stats, upcoming] = await Promise.all([fetchStats(), fetchUpcoming(today)])
 
@@ -257,11 +216,6 @@ export default async function AdminPage({
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-2xl font-black text-amber-400 tracking-widest">BARG Admin</h1>
-          <form action="/api/admin/logout" method="POST">
-            <button type="submit" className="text-zinc-500 hover:text-white text-sm transition-colors">
-              Logout
-            </button>
-          </form>
         </div>
 
         {/* Stats */}

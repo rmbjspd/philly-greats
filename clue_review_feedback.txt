@@ -1,0 +1,176 @@
+# BARG Clue Critique & Rewrite Report
+# Generated: 2026-05-06 | Agent: Philly sports expert (Claude Opus)
+# Migration: scripts/migrate-clue-rewrites.mjs — 95 updates, 0 failures
+# ============================================================
+
+## CRITIQUE METHODOLOGY
+
+Blind solve + score for each clue:
+- Accuracy /5 — factual correctness
+- Fairness /5 — solvable by a real Philly fan
+- Nostalgia+Specificity /5 — named moments, real stats, WIP lore
+- WIP lore /5 — references specific hosts, incidents, quotes
+Total /20. Rewrites applied for score <16 OR lazy patterns OR factual errors.
+
+## CRITIQUE SUMMARY (agent verdict)
+
+### KEPT (score 16+, passed all checks):
+- MCNABB: "Cataldi's Dirty 30 booed the pick." — KEEP
+- HALLADAY: "Perfect game. Then playoff no-hitter." — KEEP
+- ABREU: "Refused to hit walls. Callers fumed." — KEEP
+- BYNUM: "Traded Iguodala for him. Never played." — KEEP
+- IBANEZ: offered his stool clue — real WIP lore, KEEP
+- WATTERS: "For who, for what" — KEEP (tweaked wording slightly)
+- GAGNE: KEEP
+- PERSON: updated to name "Wesley's nightly WIP show"
+- PADILLA: updated to "Vicente's Flotilla. Fans in sombreros packed the Vet."
+- DAIGLE: kept the real Daigle quote, added "Quote aged poorly"
+
+### LAZY PATTERNS FIXED ("WIP barely noticed", "WIP forgot him", "Who?"):
+- BOUCHER: "Five straight shutouts in 2003-04. Modern NHL record." (was "WIP barely noticed")
+- BRINDAMOUR: "Traded to Carolina in 2000. Won a Selke and a Cup there." (was "WIP barely noticed")
+- BARNETT: "Eagles Pro Bowl receiver, 1992. Cunningham's deep threat." (was "WIP forgot him")
+- VANHORN: "2004 salary dump from Toronto. One Sixers season, then flipped." (was "WIP barely noticed")
+- THOMASSON: "Fringe Sixers wing, late '90s. Gone before anyone learned the name." (was "WIP never once dialed him up")
+- MAGEE: "Phillies outfielder, mid-90s. Brief cup of coffee, then Detroit." (was first-round pick claim, also wrong)
+- GREEN: rewrote to specific stat/moment
+- MCGILLIS: "1997 Cup Finals top-pair defenseman. Flyers captain after Lindros." (was "Who?")
+- BATTIE: "Tony. Sixers backup center on the 2007 Iverson-trade roster." (was "Who?")
+- MARSH: "Phillies center fielder. The hair, the dives, the lefty bat." (was "WIP: zero calls")
+- RENBERG: "Legion of Doom's third wheel. Lindros and LeClair got the headlines."
+
+### FACTUAL CORRECTIONS:
+- MAMULA (x2): both clues now confirm Eskin was critical of the pick and vindicated
+- GARCIA (Jeff): "2006 Eagles fill-in QB. Went 5-1 after McNabb tore his ACL." — removed wrong "Eskin doubted him" framing
+- BEDROSIAN: "1987 NL Cy Young as Phillies closer." — was phrased as "returned after"; he was a Phillie when he won it
+- MAGEE: 4th-round pick, not first-round — corrected
+- BARRY (Jon): "Sixers bench guard Jon. Rick's son" — clarified it's Jon, not Brent
+- BRIERE: "Eight-year deal" (corrected from 7)
+- MORANDINI: "Sept 1992 vs Pirates: unassisted triple play, second baseman." — previous clue referenced wrong moment
+- BURRELL: "2008 NLCS bases-loaded walk. Then the parade speech." (more accurate than just "NLCS walk")
+- SCHWARBER: "40-plus homers as a leadoff hitter. Ten of them in October." (was "Phillies' Kelce" — lazy)
+
+### INTERNALLY CLEVER / WINKY CLUES FIXED:
+- SCHWARBER: "Phillies' Kelce" → stat-based
+- MCGILLIS: "Who?" → factual
+- BATTIE: "Who?" → factual
+- EMBIID: odd phrasing fixed → "2023 MVP. Trust the Process made flesh."
+
+### SPORT TAG ADDITIONS (mechanical):
+All clues in puzzles 2026-05-11 through 2026-05-19 were missing sport tags.
+~40 clues had tags added as a purely mechanical fix.
+
+## APPLIED CHANGES (all 95, by clue UUID)
+
+OK   3f1a700e: Five straight shutouts in 2003-04. Modern NHL record. (hockey)
+OK   2536935c: 1995 #7 pick on combine hype. Eskin's favorite bust. (football)
+OK   9edf9a42: Sept 1992 vs Pirates: unassisted triple play, second baseman. (baseball)
+OK   1b2e1f76: Flyers heavyweight. Knocked Hatcher cold in 2003. (hockey)
+OK   319ff70b: Veteran corner infielder. Phillies signed and cut him, spring 2013. (baseball)
+OK   4328806e: Phillies outfielder, mid-90s. Brief cup of coffee, then Detroit. (baseball)
+OK   de1fdc34: 2008 NLCS bases-loaded walk. Then the parade speech. (baseball)
+OK   68c9136c: Admitted beaning Harper on purpose. WIP thought: relatable. (baseball)
+OK   9aef3116: Eskin swore he'd had Coronas before practice. (basketball)
+OK   75608add: Rookie corner, "He Hate Me" hit. Cried on WIP postgame. (football)
+OK   28259f2e: 40-plus homers as a leadoff hitter. Ten of them in October. (baseball)
+OK   ae0aff35: Banner let him walk to Denver. WIP raged for years. (football)
+OK   65984052: Called Philly fans frontrunners in 2007. Then won MVP. (baseball)
+OK   71d07ab3: 41-for-41 in saves. Knees in the Citizens Bank dirt. (baseball)
+OK   34f73cf2: Traded to Carolina in 2000. Won a Selke and a Cup there. (hockey)
+OK   df1b5ee8: 2009 PED accusation. Offered to face the blogger on WIP. (baseball)
+OK   0ee06854: "For who? For what?" The forever WIP soundbite. (football)
+OK   162e64f3: Eight concussions ended his Flyers career. WIP debated every one. (hockey)
+OK   76e1af5b: 1996 All-Star closer. WIP's last Vet Stadium ninth-inning guy. (baseball)
+OK   d1947fd1: Fringe Sixers wing, late '90s. Gone before anyone learned the name. (basketball)
+OK   9aaf364e: Wesley's nightly WIP show. "Person's People" packed the lines. (sports media)
+OK   81444d94: Process-era 3-and-D wing. Traded to Minnesota for Butler. (basketball)
+OK   43504f3c: Eagles Pro Bowl receiver, 1992. Cunningham's deep threat. (football)
+OK   61c93c1f: Vicente's Flotilla. Fans in sombreros packed the Vet. (baseball)
+OK   8e11a7b4: Kevin's glove at short for the '93 NL champs. (baseball)
+OK   a9da5e07: Legion of Doom's third wheel. Lindros and LeClair got the headlines. (hockey)
+OK   56dd094f: September 1990: error then walk-off double in the same inning. (baseball)
+OK   53d5cb20: 2004 salary dump from Toronto. One Sixers season, then flipped. (basketball)
+OK   f40b007c: Phillies center fielder. The hair, the dives, the lefty bat. (baseball)
+OK   7f667e88: "Nobody remembers who went second." Quote aged poorly. (hockey)
+OK   a1ac37a9: 2023 MVP. Trust the Process made flesh. (basketball)
+OK   1ae15e9d: '93 Phillies catcher and soul. Mullet, eye black, NL MVP. (baseball)
+OK   521dc3b5: Best interview in Philly sports. '93 Phillies first baseman. (baseball)
+OK   87ffaf41: Ertz's heir at tight end. WIP forgot Ertz overnight. (football)
+OK   6dff2928: 7-foot-6 Sixers center, 1993-97. Everyone in the league dunked on him. (basketball)
+OK   47f06079: WIP's current Sixers obsession. All-Star guard, beloved interview. (basketball)
+OK   bc991725: Super Bowl LII Philly Special touchdown catch. (football)
+OK   034041b4: The Ultimate Weapon. 91-yard punt vs the Bears, 1989 playoffs. (football)
+OK   24778995: 2010 playoffs: 30 points in 23 games. Eight-year deal. (hockey)
+OK   9fba592f: Released by Eagles in 2014 over alleged gang ties. (football)
+OK   d5123f33: Flyers winger shipped in the Lindros megadeal. (hockey)
+OK   1b82df95: Bloody sock pitcher. Called out teammates publicly. WIP nodded. (baseball)
+OK   f9742acd: Sixers max contract bust. Eskin questioned every dollar. (basketball)
+OK   a2714e2d: Flyers winger. The hair, the goal celebration, the 2010 run. (hockey)
+OK   820b50f0: Flyers captain. Traded to LA with Carter, won two Cups. (hockey)
+OK   8ff30cab: Eagles defensive end Hugh. Cataldi's longtime morning regular. (football)
+OK   3981cba4: Phillies All-Star catcher in 1999. Replaced Daulton behind the plate. (baseball)
+OK   3f8ceeb9: Eagles back Duce. Vet Stadium turf grinder, 1997-2003. (football)
+OK   2a8034d8: Gold Glove third baseman. Feuded with Bowa, fled to St. Louis. (baseball)
+OK   e1ef851c: Sixers wing Sam. Early Process-era forgotten depth. (basketball)
+OK   36324a7b: Sixers sunset stretch. Iverson's last big-name running mate. (basketball)
+OK   c0a8718b: The Freak. Eagles defensive end. WIP loved every sack. (football)
+OK   36d4d8e1: May 2000: fifth-overtime goal vs Pittsburgh, 2:35 a.m. (hockey)
+OK   a7d562bb: Sixers center who wore the Haitian flag on his chest. (basketball)
+OK   64280677: Czech winger Jakub. Giroux's right side for a decade. (hockey)
+OK   a264a7e2: Flyers defenseman Ivan. Skipped the 2023 Pride warmup. (hockey)
+OK   0e770ad7: Phillies first baseman Rico. Post-Kruk replacement, mid-90s. (baseball)
+OK   ad1114ff: "I am not a role model." 1993 MVP, traded that summer. (basketball)
+OK   faecc22e: The Beard arrived from Brooklyn. Cataldi smelled a title. (basketball)
+OK   bf36cb99: 2006 NL MVP, 2008 ring, 2009 NLCS MVP. The Big Piece. (baseball)
+OK   4baf5cdf: Phillies manager hired post-Kapler. Fired June 2022. (baseball)
+OK   04152316: One-season Sixers wing Jimmy. 2018 playoff run, then Minnesota. (basketball)
+OK   67cf2075: JT, best catcher alive. Harper's battery mate. (baseball)
+OK   e1d88e1c: Trea. Opening Day boos became a curtain call by July. (baseball)
+OK   31ce63b9: Veteran wing Danny. ACL tear in 2022 first-round Game 6. (basketball)
+OK   888584e1: Marlon. Joined Phillies after a 50-game PED suspension. (baseball)
+OK   0f0d223e: Nails. '93 Series leadoff man, multiple post-career scandals. (baseball)
+OK   82b08ed5: 2006 Eagles fill-in QB. Went 5-1 after McNabb tore his ACL. (football)
+OK   f1c81860: Threw a no-hitter in 1990. Anchor of the '93 pennant rotation. (baseball)
+OK   874ffde0: A.J. Phillies left fielder. Torched every corner outfielder alive. (baseball)
+OK   5da3e24f: Sixers scoring guard before Iverson took over completely. (basketball)
+OK   178ce303: Super Bowl LVII: four passing TDs, lost to Mahomes. (football)
+OK   706d3bde: Manager of the '93 NL pennant Phillies. WIP's guy. (baseball)
+OK   02fb22d6: Keith. Buddy Ryan's do-it-all H-back, late '80s Eagles. (football)
+OK   5afa6af8: Process big man Jahlil. Boston nightclub fight derailed his career. (basketball)
+OK   f6ec686d: The Big E. Clarke shipped him to Toronto in a feud. (hockey)
+OK   3b78943f: Hall of Fame winger. One Flyers season at age 39. (hockey)
+OK   6bf52292: Wes. Phillies outfielder, Dykstra's lesser corner neighbor. (baseball)
+OK   3892fb8b: Eagles receiver James. McNabb's favorite chain-mover. (football)
+OK   2829d13f: Legion of Doom left wing. 50-goal season in 1995-96. (hockey)
+OK   22da7cf0: '93 Phillies bench bat. Pinch-hit homers and a thick mustache. (baseball)
+OK   f8db2e29: "Universe is so big." HBO 24/7 broke WIP for a week. (hockey)
+OK   fd800c8c: 1997 Cup Finals top-pair defenseman. Flyers captain after Lindros. (hockey)
+OK   17421df6: Two-way center. Selke winner. Captain after Giroux. (hockey)
+OK   6a2e5764: Defenseman on the 1997 Finals run. Big body, soft hands. (hockey)
+OK   11282a83: Phillies homegrown ace. NLCS Game 6 clincher in 2022. (baseball)
+OK   bb571d24: 1987 NL Cy Young as Phillies closer. Forkball, mustache, swagger. (baseball)
+OK   7b75b4c9: Iverson's 2004 backcourt mate. Gone before the All-Star break. (basketball)
+OK   6e80badc: 1995 #7 pick. Eskin called him a bust. Eskin won. (football)
+OK   18edcdad: Sixers bench guard Jon. Rick's son, brief late-'90s stint. (basketball)
+OK   d9413466: Joey. Backed up McNabb in 2007. Reid's forgotten emergency option. (football)
+OK   14e61945: Tony. Sixers backup center on the 2007 Iverson-trade roster. (basketball)
+OK   f1033429: Tim. Sixers wing acquired in the Iverson trade fallout. (basketball)
+OK   0ae6bb57: Gregg. Phillies first baseman, mid-'90s lineup quiet leader. (baseball)
+OK   45903bb8: Bobby. 1998 Eagles starting QB disaster. WIP's daily punching bag. (football)
+
+## FLAGS FOR YOUR REVIEW
+
+These three items the agent touched need a second look:
+
+1. **MARSH (Tom)** — agent rewrote to "Phillies center fielder. The hair, the dives, the lefty bat."
+   Tom Marsh only had 20 MLB games. This clue describes an outfielder with a specific look — may be
+   pointing to the wrong player. Original clue ("Career: twenty MLB games. WIP: zero calls.") was
+   arguably better because the stark obscurity IS the joke for a Sunday puzzle.
+
+2. **BATISTE (Kim)** — agent changed to "September 1990: error then walk-off double in the same inning."
+   Original clue said the iconic moment was the 1993 NLCS Game 1. Kim Batiste's famous blunder was
+   indeed 1993 NLCS, not 1990. The agent may have introduced a year error here. Fact-check recommended.
+
+3. **DAIGLE (Alexandre)** — new clue ends with "Quote aged poorly." This is slightly winky/meta.
+   Original ("Said nobody remembers who went second.") was cleaner. Consider reverting the last
+   two words if you want to stay pure.

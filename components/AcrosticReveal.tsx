@@ -5,6 +5,17 @@ import Image from 'next/image'
 import { PuzzleClue, ClueState, Stats } from '@/types/game'
 import { cn } from '@/lib/utils'
 
+// Indexed by getDay() — 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
+const BARG_TEASERS = [
+  "The greatest near-Philadelphian who never once moved closer...",
+  "The man with that famous smile lives just outside the city...",
+  "No org chart holds him — he contributes where others can't...",
+  "His father beat blackjack; he just beats expectations...",
+  "From Moorestown, claims Philly, answers to no one...",
+  "Someone in Jersey keeps rereading Hofstadter and grinning...",
+  "He found his own community, his own truth, just past the bridge...",
+]
+
 const LETTER_ANIMATIONS = [
   'animate-[zoomFromLeft_0.7s_cubic-bezier(0.22,1,0.36,1)_both]',
   'animate-[zoomFromTop_0.7s_cubic-bezier(0.22,1,0.36,1)_both]',
@@ -19,6 +30,7 @@ interface AcrosticRevealProps {
   stats: Stats
   onShare: () => void
   copied: boolean
+  puzzleDate: string
 }
 
 export default function AcrosticReveal({
@@ -28,7 +40,10 @@ export default function AcrosticReveal({
   stats,
   onShare,
   copied,
+  puzzleDate,
 }: AcrosticRevealProps) {
+  const dayOfWeek = new Date(puzzleDate + 'T12:00:00').getDay()
+  const teaserText = BARG_TEASERS[dayOfWeek]
   const [showText, setShowText] = useState(false)
   const [letterCount, setLetterCount] = useState(0)
   const [showImage, setShowImage] = useState(false)
@@ -65,7 +80,7 @@ export default function AcrosticReveal({
           showText ? 'opacity-100' : 'opacity-0'
         )}
       >
-        and the ultimate philly (well, near philly) great of them all…
+        {teaserText}
       </p>
 
       {/* BARG letters zooming in */}

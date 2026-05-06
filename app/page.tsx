@@ -43,7 +43,7 @@ async function getPuzzle(): Promise<Puzzle | null> {
       letter_index: c.letter_index,
       acrostic_letter: c.acrostic_letter,
       answer: '',
-      answer_length: (c.answer as string).length,
+      answer_length: Math.min((c.answer as string).length, 10),
     })),
   }
 }

@@ -85,8 +85,6 @@ export function updateStatsOnComplete(gameState: GameState): void {
 }
 
 export function getShareText(gameState: GameState, clues: PuzzleClue[]): string {
-  const spineColumn = Math.max(...clues.map((c) => c.letter_index))
-
   // Total wrong guesses across all clues
   const totalMisses = gameState.clueStates.reduce((sum, cs) => {
     if (cs.solved) return sum + cs.guesses.length - 1
@@ -96,9 +94,9 @@ export function getShareText(gameState: GameState, clues: PuzzleClue[]): string 
 
   const allSolved = gameState.clueStates.every((cs) => cs.solved)
 
+  // No leading spacers — keeps rows ≤ answer_length (≤10) so iMessage doesn't wrap
   const rows = clues.map((clue, i) => {
     const cs = gameState.clueStates[i]
-    const spacers = spineColumn - clue.letter_index
     const preCount = clue.letter_index
     const postCount = clue.answer_length - clue.letter_index - 1
 
@@ -112,12 +110,7 @@ export function getShareText(gameState: GameState, clues: PuzzleClue[]): string 
       acrostic = '⬛'
     }
 
-    return (
-      '⬜'.repeat(spacers) +
-      fill.repeat(preCount) +
-      acrostic +
-      fill.repeat(postCount)
-    )
+    return fill.repeat(preCount) + acrostic + fill.repeat(postCount)
   })
 
   const solved = gameState.clueStates.filter((cs) => cs.solved).length

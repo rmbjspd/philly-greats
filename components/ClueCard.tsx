@@ -3,6 +3,20 @@
 import { PuzzleClue, ClueState } from '@/types/game'
 import { cn } from '@/lib/utils'
 
+const SPORT_EMOJI: Record<string, string> = {
+  baseball: '⚾',
+  basketball: '🏀',
+  football: '🏈',
+  hockey: '🏒',
+  'sports media': '🎤',
+}
+
+function parseClueSport(text: string): { text: string; emoji: string } {
+  const match = text.match(/^(.*?)\s*\((baseball|basketball|football|hockey|sports media)\)$/i)
+  if (match) return { text: match[1], emoji: SPORT_EMOJI[match[2].toLowerCase()] ?? '' }
+  return { text, emoji: '' }
+}
+
 const BOX = 22    // px — small enough to fit longest answers on mobile
 const GAP = 2     // px
 const SLOT = BOX + GAP  // 24px per cell
@@ -78,6 +92,7 @@ export default function ClueCard({
 }: ClueCardProps) {
   const showAnswer = state.solved || state.revealed
   const letters = showAnswer && answer ? answer.split('') : []
+  const { text: clueMainText, emoji: sportEmoji } = parseClueSport(clue.clue_text)
 
   const spacerCt = spineColumn - clue.letter_index
   const totalBoxes = clue.answer_length
@@ -128,7 +143,7 @@ export default function ClueCard({
                 : isActive ? 'text-[#003594]/80' : 'text-[#003594]/60'
             )}
           >
-            {clue.clue_text}
+            {clueMainText}{sportEmoji && <span className="ml-1">{sportEmoji}</span>}
           </span>
         </div>
       </div>
@@ -146,7 +161,7 @@ export default function ClueCard({
               : isActive ? 'text-[#003594]/80' : 'text-[#003594]/60'
           )}
         >
-          {clue.clue_text}
+          {clueMainText}{sportEmoji && <span className="ml-1">{sportEmoji}</span>}
         </span>
       </div>
 

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { supabase, supabaseServer } from '@/lib/supabase'
 
 function getTodayET(): string {
   const now = new Date()
@@ -43,6 +43,13 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     )
   }
+
+  // Log visit (fire and forget — don't block response)
+  const ip =
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+    request.headers.get('x-real-ip') ??
+    'unknown'
+  void supabaseServer.from('visits').insert({ puzzle_date: date, ip_address: ip })
 
   return NextResponse.json({
     id: puzzle.id,

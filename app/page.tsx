@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { Puzzle } from '@/types/game'
 import { supabase } from '@/lib/supabase'
 import GameBoard from '@/components/GameBoard'

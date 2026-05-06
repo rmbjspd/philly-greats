@@ -1,40 +1,52 @@
 'use client'
 
-import { useState } from 'react'
 import { PuzzleClue, ClueState } from '@/types/game'
 import { cn } from '@/lib/utils'
 
-const MAX_GUESSES = 6
-const BOX = 28   // px
-const GAP = 3    // px
-const SLOT = BOX + GAP  // 31px per cell
+const BOX = 30    // px
+const GAP = 3     // px
+const SLOT = BOX + GAP  // 33px per cell
 
-interface BoxProps {
+interface LetterBoxProps {
   letter?: string
   highlight?: boolean
   solved?: boolean
   revealed?: boolean
+  isCursor?: boolean
+  isActive?: boolean
 }
 
-function LetterBox({ letter = '', highlight, solved, revealed }: BoxProps) {
+function LetterBox({ letter = '', highlight, solved, revealed, isCursor, isActive }: LetterBoxProps) {
   const done = solved || revealed
+
+  let classes: string
+  if (done) {
+    if (solved) {
+      classes = highlight
+        ? 'border-2 border-[#FDB912] bg-[#FDB912] text-[#003594]'
+        : 'border-2 border-[#003594] bg-[#003594] text-white'
+    } else {
+      // revealed (gave up)
+      classes = highlight
+        ? 'border-2 border-[#7A9CC5] bg-[#B8CCE0] text-[#003594]/70'
+        : 'border-2 border-[#7A9CC5] bg-[#B8CCE0] text-[#003594]/70'
+    }
+  } else if (highlight) {
+    classes = 'border-2 border-[#FDB912] bg-white text-[#003594]'
+  } else if (isCursor) {
+    classes = 'border-2 border-[#003594] bg-white text-[#003594]'
+  } else if (letter) {
+    classes = 'border-2 border-[#003594]/70 bg-white text-[#003594]'
+  } else if (isActive) {
+    classes = 'border border-[#003594]/30 bg-white text-[#003594]'
+  } else {
+    classes = 'border border-[#003594]/15 bg-white/50 text-[#003594]'
+  }
+
   return (
     <div
       style={{ width: BOX, height: BOX, flexShrink: 0 }}
-      className={cn(
-        'flex items-center justify-center border text-[11px] font-bold uppercase tracking-wide',
-        highlight
-          ? done
-            ? solved
-              ? 'border-amber-400 bg-amber-500 text-black'
-              : 'border-zinc-600 bg-zinc-900 text-zinc-500'
-            : 'border-amber-400/50 bg-transparent text-zinc-600'
-          : done
-            ? solved
-              ? 'border-green-800/60 bg-green-900/30 text-green-300'
-              : 'border-zinc-700 bg-zinc-900/50 text-zinc-500'
-            : 'border-zinc-700/60 bg-transparent text-zinc-600'
-      )}
+      className={cn('flex items-center justify-center text-[11px] font-bold uppercase tracking-wide', classes)}
     >
       {letter}
     </div>
@@ -44,151 +56,111 @@ function LetterBox({ letter = '', highlight, solved, revealed }: BoxProps) {
 interface ClueCardProps {
   clue: PuzzleClue
   state: ClueState
-  onGuess: (guess: string) => void
   onReveal: () => void
   answer?: string
   disabled: boolean
   spineColumn: number
+  isActive: boolean
+  currentInput: string
+  onActivate: () => void
 }
 
 export default function ClueCard({
   clue,
   state,
-  onGuess,
   onReveal,
   answer,
   disabled,
   spineColumn,
+  isActive,
+  currentInput,
+  onActivate,
 }: ClueCardProps) {
-  const [input, setInput] = useState('')
-  const [shake, setShake] = useState(false)
-
-  const canGuess = !state.solved && !state.revealed && !disabled
-  const guessesLeft = MAX_GUESSES - state.guesses.length
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    const g = input.trim()
-    if (!g) return
-    if (state.guesses.some((x) => x.toLowerCase() === g.toLowerCase())) {
-      setShake(true)
-      setTimeout(() => setShake(false), 500)
-      return
-    }
-    onGuess(g)
-    setInput('')
-  }
-
   const showAnswer = state.solved || state.revealed
   const letters = showAnswer && answer ? answer.split('') : []
 
-  const preCt = clue.letter_index
-  const postCt = showAnswer
-    ? Math.max(0, letters.length - clue.letter_index - 1)
-    : Math.max(0, clue.answer_length - clue.letter_index - 1)
-  const spacerCt = spineColumn - preCt
-
-  // pixel offset to the start of the right zone (after highlight)
-  const rightStart = (spacerCt + preCt + 1) * SLOT
+  const spacerCt = spineColumn - clue.letter_index
+  const totalBoxes = clue.answer_length
+  const cursorPos = isActive && !showAnswer ? currentInput.length : -1
 
   return (
-    <div className={cn('flex flex-col', shake && 'animate-[shake_0.5s]')}>
-      {/* Main row */}
-      <div className="flex items-center" style={{ gap: GAP }}>
-        {/* Spacers */}
+    <div
+      className={cn(
+        'flex flex-col cursor-default select-none',
+        !state.solved && !state.revealed && !disabled && 'cursor-pointer'
+      )}
+      onClick={() => {
+        if (!state.solved && !state.revealed && !disabled) onActivate()
+      }}
+    >
+      {/* Box row + clue */}
+      <div className="flex items-center flex-wrap gap-y-1">
+        {/* Spacers to align highlight column */}
         {Array.from({ length: spacerCt }).map((_, i) => (
-          <div key={`sp-${i}`} style={{ width: BOX, height: BOX, flexShrink: 0 }} />
+          <div key={`sp-${i}`} style={{ width: BOX, height: BOX, flexShrink: 0, marginRight: GAP }} />
         ))}
 
-        {/* Pre-highlight boxes */}
-        {Array.from({ length: preCt }).map((_, i) => (
-          <LetterBox
-            key={`pre-${i}`}
-            letter={letters[i]}
-            solved={state.solved}
-            revealed={state.revealed}
-          />
-        ))}
+        {/* All letter boxes */}
+        {Array.from({ length: totalBoxes }).map((_, i) => {
+          const isHighlight = i === clue.letter_index
+          const letter = showAnswer ? (letters[i] || '') : (isActive ? (currentInput[i] || '') : '')
+          const isCursor = i === cursorPos
 
-        {/* Highlight box */}
-        <LetterBox
-          letter={letters[preCt]}
-          highlight
-          solved={state.solved}
-          revealed={state.revealed}
-        />
-
-        {/* Post-highlight boxes */}
-        {showAnswer &&
-          Array.from({ length: postCt }).map((_, i) => (
-            <LetterBox
-              key={`post-${i}`}
-              letter={letters[preCt + 1 + i]}
-              solved={state.solved}
-              revealed={state.revealed}
-            />
-          ))}
+          return (
+            <div key={i} style={{ marginRight: i < totalBoxes - 1 ? GAP : 0 }}>
+              <LetterBox
+                letter={letter}
+                highlight={isHighlight}
+                solved={state.solved}
+                revealed={state.revealed}
+                isCursor={isCursor}
+                isActive={isActive}
+              />
+            </div>
+          )
+        })}
 
         {/* Clue text */}
         <span
           className={cn(
-            'text-sm leading-snug shrink min-w-0',
+            'text-sm leading-snug',
             showAnswer
-              ? state.solved
-                ? 'text-zinc-400'
-                : 'text-zinc-600'
-              : 'text-zinc-300'
+              ? state.solved ? 'text-[#003594]/50' : 'text-[#003594]/30'
+              : isActive ? 'text-[#003594]/80' : 'text-[#003594]/60'
           )}
-          style={{ marginLeft: 10 }}
+          style={{ marginLeft: 12 }}
         >
           {clue.clue_text}
         </span>
       </div>
 
-      {/* Input zone — aligned under right of highlight */}
-      {canGuess && (
-        <div className="mt-2 flex flex-col gap-1" style={{ paddingLeft: rightStart + 10 }}>
+      {/* Wrong guesses + controls under active row */}
+      {isActive && !showAnswer && (
+        <div
+          className="mt-2 flex flex-col gap-1"
+          style={{ paddingLeft: (spacerCt + clue.letter_index + 1) * SLOT + 4 }}
+        >
           {state.guesses.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-0.5">
+            <div className="flex flex-wrap gap-x-2 gap-y-0.5">
               {state.guesses.map((g, i) => (
-                <span key={i} className="text-xs text-zinc-700 line-through">
+                <span key={i} className="text-xs text-[#003594]/30 line-through">
                   {g}
                 </span>
               ))}
             </div>
           )}
-          <form onSubmit={handleSubmit} className="flex items-center gap-2">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="last name"
-              className="bg-transparent border-b border-zinc-700 text-white text-sm py-0.5 w-32 focus:outline-none focus:border-amber-400 placeholder:text-zinc-700 tracking-wide"
-              autoComplete="off"
-              autoCorrect="off"
-              autoCapitalize="off"
-              spellCheck={false}
-            />
-            <button
-              type="submit"
-              disabled={!input.trim()}
-              className="text-zinc-500 hover:text-white disabled:opacity-20 text-base transition-colors leading-none"
-            >
-              →
-            </button>
-            {guessesLeft <= 3 && (
-              <span className="text-xs text-zinc-700">{guessesLeft}</span>
-            )}
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] text-[#003594]/30 tracking-wide">↵ enter to submit</span>
             {state.guesses.length >= 2 && (
               <button
                 type="button"
-                onClick={onReveal}
-                className="text-xs text-zinc-700 hover:text-zinc-500 transition-colors ml-1"
+                onClick={(e) => { e.stopPropagation(); onReveal() }}
+                className="text-[10px] text-[#003594]/25 hover:text-[#003594]/50 transition-colors"
               >
-                reveal
+                reveal answer
               </button>
             )}
-          </form>
+          </div>
         </div>
       )}
     </div>

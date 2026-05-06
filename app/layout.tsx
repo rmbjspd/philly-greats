@@ -13,9 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BARG — Daily Philly Sports Trivia",
-  description:
-    "Daily acrostic trivia game featuring Philadelphia sports figures. Guess 4 players whose highlighted letters spell B-A-R-G.",
+  title: "Philly Sports Daily",
+  description: "Daily Philadelphia sports trivia puzzle.",
 };
 
 export default function RootLayout({
@@ -28,7 +27,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#1a1a2e] text-white">
+      <body className="min-h-full flex flex-col bg-[#EBF4FB] text-[#003594]">
         {children}
       </body>
     </html>

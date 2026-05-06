@@ -45,11 +45,11 @@ export default function StatsModal({ open, onClose, stats, gameState, clues }: S
   return (
     <Dialog open={open} onOpenChange={(o: boolean) => { if (!o) onClose() }}>
       <DialogContent
-        className="bg-[#0f0f23] border border-zinc-700 text-white max-w-sm"
+        className="bg-[#EBF4FB] border border-[#003594]/20 text-[#003594] max-w-sm"
         showCloseButton
       >
         <DialogHeader>
-          <DialogTitle className="text-amber-400 font-black text-xl tracking-widest text-center">
+          <DialogTitle className="text-[#003594] font-black text-xl tracking-widest text-center">
             STATISTICS
           </DialogTitle>
         </DialogHeader>
@@ -63,8 +63,8 @@ export default function StatsModal({ open, onClose, stats, gameState, clues }: S
             { label: 'Max', value: stats.maxStreak },
           ].map(({ label, value }) => (
             <div key={label} className="flex flex-col items-center">
-              <span className="text-2xl font-black text-white">{value}</span>
-              <span className="text-xs text-zinc-400 leading-tight">{label}</span>
+              <span className="text-2xl font-black text-[#003594]">{value}</span>
+              <span className="text-xs text-[#003594]/50 leading-tight">{label}</span>
             </div>
           ))}
         </div>
@@ -72,15 +72,15 @@ export default function StatsModal({ open, onClose, stats, gameState, clues }: S
         {/* Distribution */}
         {distEntries.length > 0 && (
           <div>
-            <h3 className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2 text-center">
+            <h3 className="text-xs font-bold text-[#003594]/50 uppercase tracking-widest mb-2 text-center">
               Guess Distribution
             </h3>
             <div className="space-y-1">
               {distEntries.map(({ guesses, count }) => (
                 <div key={guesses} className="flex items-center gap-2">
-                  <span className="text-xs text-zinc-400 w-4 text-right">{guesses}</span>
+                  <span className="text-xs text-[#003594]/50 w-4 text-right">{guesses}</span>
                   <div
-                    className="h-5 bg-[#E81828] rounded-sm flex items-center px-1.5 transition-all"
+                    className="h-5 bg-[#003594] rounded-sm flex items-center px-1.5 transition-all"
                     style={{ width: `${Math.max(8, (count / maxCount) * 100)}%` }}
                   >
                     <span className="text-xs font-bold text-white">{count}</span>
@@ -92,14 +92,14 @@ export default function StatsModal({ open, onClose, stats, gameState, clues }: S
         )}
 
         {distEntries.length === 0 && stats.gamesPlayed === 0 && (
-          <p className="text-center text-zinc-500 text-sm">No games played yet.</p>
+          <p className="text-center text-[#003594]/40 text-sm">No games played yet.</p>
         )}
 
         {/* Share button */}
         {gameState?.completed && (
           <Button
             onClick={handleShare}
-            className="w-full bg-[#E81828] hover:bg-[#c0111f] text-white font-bold mt-2"
+            className="w-full bg-[#003594] hover:bg-[#002070] text-white font-bold mt-2"
           >
             {copied ? 'Copied!' : 'Share Results'}
           </Button>
@@ -108,7 +108,7 @@ export default function StatsModal({ open, onClose, stats, gameState, clues }: S
         <Button
           variant="outline"
           onClick={onClose}
-          className="w-full border-zinc-600 text-zinc-300 hover:text-white hover:bg-zinc-700"
+          className="w-full border-[#003594]/30 text-[#003594]/60 hover:text-[#003594] hover:bg-[#003594]/10"
         >
           Close
         </Button>

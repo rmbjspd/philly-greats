@@ -53,20 +53,15 @@ export default async function Home() {
 
   if (!puzzle) {
     return (
-      <main className="min-h-screen bg-[#1a1a2e] flex flex-col items-center justify-center px-4">
-        <h1 className="text-3xl font-black text-amber-400 tracking-widest mb-4">BARG</h1>
-        <p className="text-zinc-400 text-center">
-          No puzzle available for today. Check back tomorrow!
-        </p>
-        <p className="text-zinc-600 text-sm mt-2 text-center">
-          Philadelphia sports trivia — daily acrostic
-        </p>
+      <main className="min-h-screen flex flex-col items-center justify-center px-4">
+        <p className="text-[#003594] text-center">No puzzle today. Check back tomorrow.</p>
+        <p className="text-[#003594]/40 text-sm mt-2 text-center">Philadelphia sports · daily</p>
       </main>
     )
   }
 
   return (
-    <main className="min-h-screen bg-[#1a1a2e]">
+    <main className="min-h-screen">
       <GameBoard puzzle={puzzle} />
     </main>
   )

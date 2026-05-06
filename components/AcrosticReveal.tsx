@@ -29,7 +29,7 @@ export default function AcrosticReveal({ clues, clueStates, answers }: AcrosticR
   }, [])
 
   return (
-    <div className="mt-10 pt-8 border-t border-zinc-800">
+    <div className="mt-10 pt-8 border-t border-[#003594]/10">
       <div className="flex gap-3 justify-start">
         {clues.map((clue, i) => {
           const answer = answers[i] || ''
@@ -46,10 +46,10 @@ export default function AcrosticReveal({ clues, clueStates, answers }: AcrosticR
             >
               <div
                 className={cn(
-                  'w-10 h-10 flex items-center justify-center border text-lg font-black uppercase',
+                  'w-10 h-10 flex items-center justify-center border-2 text-lg font-black uppercase',
                   solved
-                    ? 'border-amber-400 bg-amber-500 text-black'
-                    : 'border-zinc-600 bg-zinc-900 text-zinc-400'
+                    ? 'border-[#FDB912] bg-[#FDB912] text-[#003594]'
+                    : 'border-[#003594]/20 bg-white text-[#003594]/50'
                 )}
               >
                 {letter}

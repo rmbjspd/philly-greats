@@ -243,7 +243,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
   }))
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-6 pb-12">
+    <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 pb-12">
       {/* Hidden input captures keyboard for Wordle-style entry */}
       <input
         ref={hiddenInputRef}
@@ -257,6 +257,11 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
             .toUpperCase()
             .slice(0, activeClue.answer_length)
           setCurrentInput(filtered)
+          // Auto-submit when all boxes are filled
+          if (filtered.length === activeClue.answer_length && filtered.length > 0) {
+            handleGuess(activeClueIndex, filtered)
+            setCurrentInput('')
+          }
         }}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {

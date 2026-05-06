@@ -3,9 +3,9 @@
 import { PuzzleClue, ClueState } from '@/types/game'
 import { cn } from '@/lib/utils'
 
-const BOX = 30    // px
-const GAP = 3     // px
-const SLOT = BOX + GAP  // 33px per cell
+const BOX = 22    // px — small enough to fit longest answers on mobile
+const GAP = 2     // px
+const SLOT = BOX + GAP  // 24px per cell
 
 interface LetterBoxProps {
   letter?: string
@@ -93,22 +93,22 @@ export default function ClueCard({
         if (!state.solved && !state.revealed && !disabled) onActivate()
       }}
     >
-      {/* Box row + clue */}
-      <div className="flex items-center flex-wrap gap-y-1">
-        {/* Spacers to align highlight column */}
-        {Array.from({ length: spacerCt }).map((_, i) => (
-          <div key={`sp-${i}`} style={{ width: BOX, height: BOX, flexShrink: 0, marginRight: GAP }} />
-        ))}
+      {/* Box row — scrollable on mobile if needed */}
+      <div className="overflow-x-auto pb-0.5">
+        <div className="flex items-center" style={{ gap: GAP }}>
+          {/* Spacers to align highlight column */}
+          {Array.from({ length: spacerCt }).map((_, i) => (
+            <div key={`sp-${i}`} style={{ width: BOX, height: BOX, flexShrink: 0 }} />
+          ))}
 
-        {/* All letter boxes */}
-        {Array.from({ length: totalBoxes }).map((_, i) => {
-          const isHighlight = i === clue.letter_index
-          const letter = showAnswer ? (letters[i] || '') : (isActive ? (currentInput[i] || '') : '')
-          const isCursor = i === cursorPos
-
-          return (
-            <div key={i} style={{ marginRight: i < totalBoxes - 1 ? GAP : 0 }}>
+          {/* All letter boxes */}
+          {Array.from({ length: totalBoxes }).map((_, i) => {
+            const isHighlight = i === clue.letter_index
+            const letter = showAnswer ? (letters[i] || '') : (isActive ? (currentInput[i] || '') : '')
+            const isCursor = i === cursorPos
+            return (
               <LetterBox
+                key={i}
                 letter={letter}
                 highlight={isHighlight}
                 solved={state.solved}
@@ -116,11 +116,28 @@ export default function ClueCard({
                 isCursor={isCursor}
                 isActive={isActive}
               />
-            </div>
-          )
-        })}
+            )
+          })}
 
-        {/* Clue text */}
+          {/* Clue text — inline on sm+, hidden here on mobile */}
+          <span
+            className={cn(
+              'hidden sm:block text-sm leading-snug shrink-0 ml-3',
+              showAnswer
+                ? state.solved ? 'text-[#003594]/50' : 'text-[#003594]/30'
+                : isActive ? 'text-[#003594]/80' : 'text-[#003594]/60'
+            )}
+          >
+            {clue.clue_text}
+          </span>
+        </div>
+      </div>
+
+      {/* Clue text — below boxes on mobile only */}
+      <div
+        className="sm:hidden mt-1"
+        style={{ paddingLeft: spacerCt * SLOT }}
+      >
         <span
           className={cn(
             'text-sm leading-snug',
@@ -128,7 +145,6 @@ export default function ClueCard({
               ? state.solved ? 'text-[#003594]/50' : 'text-[#003594]/30'
               : isActive ? 'text-[#003594]/80' : 'text-[#003594]/60'
           )}
-          style={{ marginLeft: 12 }}
         >
           {clue.clue_text}
         </span>
@@ -137,8 +153,8 @@ export default function ClueCard({
       {/* Wrong guesses + controls under active row */}
       {isActive && !showAnswer && (
         <div
-          className="mt-2 flex flex-col gap-1"
-          style={{ paddingLeft: (spacerCt + clue.letter_index + 1) * SLOT + 4 }}
+          className="mt-1.5 flex flex-col gap-1"
+          style={{ paddingLeft: spacerCt * SLOT }}
         >
           {state.guesses.length > 0 && (
             <div className="flex flex-wrap gap-x-2 gap-y-0.5">
@@ -149,18 +165,15 @@ export default function ClueCard({
               ))}
             </div>
           )}
-          <div className="flex items-center gap-3">
-            <span className="text-[10px] text-[#003594]/30 tracking-wide">↵ enter to submit</span>
-            {state.guesses.length >= 2 && (
-              <button
-                type="button"
-                onClick={(e) => { e.stopPropagation(); onReveal() }}
-                className="text-[10px] text-[#003594]/25 hover:text-[#003594]/50 transition-colors"
-              >
-                reveal answer
-              </button>
-            )}
-          </div>
+          {state.guesses.length >= 2 && (
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); onReveal() }}
+              className="text-[10px] text-[#003594]/25 hover:text-[#003594]/50 transition-colors w-fit"
+            >
+              reveal answer
+            </button>
+          )}
         </div>
       )}
     </div>

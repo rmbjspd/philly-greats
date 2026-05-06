@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { supabaseServer } from '@/lib/supabase'
 
 export async function POST(request: NextRequest) {
   let body: { puzzle_id: string; clue_order: number }

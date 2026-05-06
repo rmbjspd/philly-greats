@@ -84,24 +84,46 @@ export function updateStatsOnComplete(gameState: GameState): void {
   saveStats(stats)
 }
 
-export function getShareText(gameState: GameState, _clues: PuzzleClue[]): string {
-  const lines: string[] = [`BARG ${gameState.date}`]
+export function getShareText(gameState: GameState, clues: PuzzleClue[]): string {
+  const spineColumn = Math.max(...clues.map((c) => c.letter_index))
 
-  gameState.clueStates.forEach((state) => {
-    if (state.revealed) {
-      // Gave up: all red
-      lines.push('🟥🟥🟥🟥🟥🟥')
-    } else if (state.solved) {
-      // solved: green box at the position where they got it right, rest empty
-      const solveIndex = state.guesses.length - 1
-      const row = Array(6).fill('⬛')
-      row[solveIndex] = '🟩'
-      lines.push(row.join(''))
+  // Total wrong guesses across all clues
+  const totalMisses = gameState.clueStates.reduce((sum, cs) => {
+    if (cs.solved) return sum + cs.guesses.length - 1
+    if (cs.revealed) return sum + cs.guesses.length
+    return sum
+  }, 0)
+
+  const allSolved = gameState.clueStates.every((cs) => cs.solved)
+
+  const rows = clues.map((clue, i) => {
+    const cs = gameState.clueStates[i]
+    const spacers = spineColumn - clue.letter_index
+    const preCount = clue.letter_index
+    const postCount = clue.answer_length - clue.letter_index - 1
+
+    let fill: string
+    let acrostic: string
+    if (cs.solved) {
+      fill = cs.guesses.length === 1 ? '🟩' : '🟨'
+      acrostic = '🟥'
     } else {
-      // not solved, not revealed (shouldn't happen if game is complete, but just in case)
-      lines.push('⬛⬛⬛⬛⬛⬛')
+      fill = '⬜'
+      acrostic = '⬜'
     }
+
+    return (
+      '⬛'.repeat(spacers) +
+      fill.repeat(preCount) +
+      acrostic +
+      fill.repeat(postCount)
+    )
   })
 
-  return lines.join('\n')
+  const solved = gameState.clueStates.filter((cs) => cs.solved).length
+  const summary = allSolved
+    ? `I solved Philly Greats with ${totalMisses} miss${totalMisses !== 1 ? 'es' : ''}`
+    : `Philly Greats: ${solved}/4 solved, ${totalMisses} miss${totalMisses !== 1 ? 'es' : ''}`
+
+  return [`Philly Greats · ${gameState.date}`, ...rows, '', summary].join('\n')
 }

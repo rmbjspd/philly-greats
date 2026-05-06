@@ -38,22 +38,34 @@ const BARG_TEASERS = [
   "The strange loop lives in South Jersey and smiles about it...",
   "He reads the kind of books that reorganize how you see everything, then reads them again...",
   "A mind shaped by Hofstadter operates outside the categories other minds use...",
-  // Moorestown / not Philly
+  // Moorestown / not Philly (with punch)
   "From Moorestown, claims Philly, answers to no one...",
   "Just across the bridge, a legend in his own quiet radius...",
-  "He doesn't need the Philadelphia address to be the most Philadelphia person you've met...",
-  "Technically New Jersey. Spiritually something else entirely...",
-  "The river separates addresses. It doesn't separate greatness...",
   "He lives five miles from Philly and operates like he owns the place...",
   "Moorestown produced exactly one of him, and that was plenty...",
-  "South Jersey keeps its best people just out of reach...",
-  "The Delaware River draws a line. He has never acknowledged it...",
   "He'll claim Philly if you ask. He won't move there if you beg...",
   "Just past the bridge, someone is watching Eagles games and feeling nothing but ownership...",
-  "Not quite Philly. Not not Philly. Something Philly never managed to categorize...",
-  "The greatest near-Philadelphian who never once moved closer...",
   "Moorestown: population 20,000, and one person who redefined the category...",
-  "He commutes to Philadelphia's orbit without ever changing his mailing address...",
+  // Sugar water
+  "He orders sugar water, same as the guy from Men in Black, and he owns it...",
+  "Sugar and water. That's the order. The man has never wavered...",
+  "The alien in Men in Black had good taste in beverages. So does he...",
+  "Sugar water, straight up. He and a certain cinematic extraterrestrial are aligned on this...",
+  // Tracy Webber broke his bed
+  "Tracy Webber broke his bed. He considers this a highlight...",
+  "The bed did not survive Tracy Webber. He upgraded. No regrets...",
+  "There is a story about Tracy Webber and a bed frame that he tells with great pride...",
+  // Everest and K-2 same night
+  "The only person on record to summit Everest and K-2 in the same night...",
+  "Everest and K-2. Same night. Back in Moorestown by morning...",
+  "The mountaineering world has no framework for what he did that particular evening...",
+  "He climbed both peaks in one night. The records office is still processing the paperwork...",
+  "Both Everest and K-2, same night, and still back in time to be disappointed by the Eagles...",
+  // John Kruk's old house
+  "He lives in John Kruk's old house. The neighborhood has not complained...",
+  "John Kruk's old house now belongs to someone who fills it better...",
+  "He bought John Kruk's old house. The '93 Phillies energy was non-negotiable...",
+  "The house has seen two legends. Kruk got there first. He got there better...",
   // Father beat blackjack
   "His father beat blackjack; he just beats expectations...",
   "It runs in the family: finding the edge that everyone else thought wasn't there...",
@@ -109,11 +121,7 @@ const BARG_TEASERS = [
   "The kind of person you want on every problem and can never fully explain why...",
   "He has been beating expectations so long that people have stopped being surprised...",
   // Mixed
-  "The man Philly claims without a zip code to back it up...",
   "He has never needed a spotlight and has never been without one...",
-  "Just outside the city, just outside every category, entirely himself...",
-  "He is the answer to a question Philly didn't know it was asking...",
-  "The ultimate Philly great has never quite lived in Philadelphia...",
 ]
 
 const LETTER_ANIMATIONS = [

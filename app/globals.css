@@ -134,3 +134,24 @@
   10%, 50%, 90% { transform: translateX(-4px); }
   30%, 70% { transform: translateX(4px); }
 }
+
+@keyframes zoomFromLeft {
+  from { transform: translateX(-110vw) scale(3); opacity: 0; }
+  to   { transform: translateX(0)       scale(1); opacity: 1; }
+}
+@keyframes zoomFromTop {
+  from { transform: translateY(-110vh) scale(3); opacity: 0; }
+  to   { transform: translateY(0)      scale(1); opacity: 1; }
+}
+@keyframes zoomFromRight {
+  from { transform: translateX(110vw) scale(3); opacity: 0; }
+  to   { transform: translateX(0)     scale(1); opacity: 1; }
+}
+@keyframes zoomFromBottom {
+  from { transform: translateY(110vh) scale(3); opacity: 0; }
+  to   { transform: translateY(0)     scale(1); opacity: 1; }
+}
+@keyframes dissolve {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

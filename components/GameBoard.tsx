@@ -7,6 +7,7 @@ import {
   saveGameState,
   getStats,
   updateStatsOnComplete,
+  getShareText,
 } from '@/lib/gameState'
 import ClueCard from './ClueCard'
 import AcrosticReveal from './AcrosticReveal'
@@ -42,7 +43,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
   ])
   const [statsOpen, setStatsOpen] = useState(false)
   const [stats, setStats] = useState(() => getStats())
-  const [statsUpdated, setStatsUpdated] = useState(false)
+  const [copied, setCopied] = useState(false)
   const [activeClueIndex, setActiveClueIndex] = useState(0)
   const [currentInput, setCurrentInput] = useState('')
   const hiddenInputRef = useRef<HTMLInputElement>(null)
@@ -88,16 +89,13 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
   }
 
   const checkCompletion = useCallback(
-    (state: GameState, updatedStatsAlready?: boolean) => {
+    (state: GameState) => {
       const allDone = state.clueStates.every((cs) => cs.solved || cs.revealed)
       if (allDone && !state.completed) {
         const newState = { ...state, completed: true }
         saveGameState(newState)
-        if (!updatedStatsAlready) {
-          updateStatsOnComplete(newState)
-          setStats(getStats())
-          setStatsUpdated(true)
-        }
+        updateStatsOnComplete(newState)
+        setStats(getStats())
         return newState
       }
       return state
@@ -105,12 +103,15 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     []
   )
 
-  useEffect(() => {
-    if (statsUpdated) {
-      setStatsOpen(true)
-      setStatsUpdated(false)
-    }
-  }, [statsUpdated])
+  function handleShare() {
+    if (!gameState) return
+    const cluesWithAnswers = puzzle.clues.map((c, i) => ({ ...c, answer: answers[i] || '' }))
+    const text = getShareText(gameState, cluesWithAnswers)
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
 
   async function handleGuess(clueIndex: number, guess: string) {
     if (!gameState) return
@@ -314,6 +315,9 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
           clues={puzzle.clues}
           clueStates={gameState.clueStates}
           answers={answers}
+          stats={stats}
+          onShare={handleShare}
+          copied={copied}
         />
       )}
 

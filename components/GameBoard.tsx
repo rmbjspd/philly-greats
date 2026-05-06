@@ -323,7 +323,6 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
           stats={stats}
           onShare={handleShare}
           copied={copied}
-          puzzleDate={puzzle.puzzle_date}
         />
       )}
 

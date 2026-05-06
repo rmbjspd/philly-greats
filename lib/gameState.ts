@@ -108,12 +108,12 @@ export function getShareText(gameState: GameState, clues: PuzzleClue[]): string 
       fill = cs.guesses.length === 1 ? '🟩' : '🟨'
       acrostic = '🟥'
     } else {
-      fill = '⬜'
-      acrostic = '⬜'
+      fill = '⬛'
+      acrostic = '⬛'
     }
 
     return (
-      '⬛'.repeat(spacers) +
+      '⬜'.repeat(spacers) +
       fill.repeat(preCount) +
       acrostic +
       fill.repeat(postCount)

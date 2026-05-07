@@ -1,7 +1,8 @@
 export const dynamic = 'force-dynamic'
 
+import { headers } from 'next/headers'
 import { Puzzle } from '@/types/game'
-import { supabase } from '@/lib/supabase'
+import { supabase, supabaseServer } from '@/lib/supabase'
 import GameBoard from '@/components/GameBoard'
 
 function getTodayET(): string {
@@ -48,8 +49,22 @@ async function getPuzzle(): Promise<Puzzle | null> {
   }
 }
 
+async function logVisit(date: string) {
+  const h = await headers()
+  const ip =
+    h.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+    h.get('x-real-ip') ??
+    'unknown'
+  const { error } = await supabaseServer
+    .from('visits')
+    .insert({ puzzle_date: date, ip_address: ip })
+  if (error) console.error('[visits insert]', error.message, error.details)
+  else console.log('[visits insert] ok', date, ip)
+}
+
 export default async function Home() {
   const puzzle = await getPuzzle()
+  if (puzzle) await logVisit(puzzle.puzzle_date)
 
   if (!puzzle) {
     return (

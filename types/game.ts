@@ -5,6 +5,7 @@ export interface PuzzleClue {
   clue_order: number
   clue_text: string
   answer: string        // returned from API after solve or on give-up
+  first_name?: string   // returned from API alongside answer
   answer_length: number // populated server-side; answer itself is never sent to client
   letter_index: number  // which letter of answer feeds into BARG
   acrostic_letter: AcrosticLetter

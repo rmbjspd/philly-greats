@@ -49,6 +49,9 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
   const [answers, setAnswers] = useState<(string | undefined)[]>([
     undefined, undefined, undefined, undefined,
   ])
+  const [firstNames, setFirstNames] = useState<(string | undefined)[]>([
+    undefined, undefined, undefined, undefined,
+  ])
   const [statsOpen, setStatsOpen] = useState(false)
   const [stats, setStats] = useState(() => getStats())
   const [copied, setCopied] = useState(false)
@@ -67,12 +70,9 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
       // Restore answers for already-solved/revealed clues
       saved.clueStates.forEach((cs, i) => {
         if (cs.solved || cs.revealed) {
-          fetchAnswer(puzzle.id, i + 1).then((ans) => {
-            setAnswers((prev) => {
-              const next = [...prev]
-              next[i] = ans
-              return next
-            })
+          fetchAnswer(puzzle.id, i + 1).then(({ answer, firstName }) => {
+            setAnswers((prev) => { const n = [...prev]; n[i] = answer; return n })
+            setFirstNames((prev) => { const n = [...prev]; n[i] = firstName ?? undefined; return n })
           })
         }
       })
@@ -85,15 +85,15 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [puzzle.puzzle_date, puzzle.id])
 
-  async function fetchAnswer(puzzleId: string, clueOrder: number): Promise<string> {
+  async function fetchAnswer(puzzleId: string, clueOrder: number): Promise<{ answer: string; firstName: string | null }> {
     const res = await fetch('/api/answer', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ puzzle_id: puzzleId, clue_order: clueOrder }),
     })
-    if (!res.ok) return ''
+    if (!res.ok) return { answer: '', firstName: null }
     const data = await res.json()
-    return data.answer || ''
+    return { answer: data.answer || '', firstName: data.first_name || null }
   }
 
   const checkCompletion = useCallback(
@@ -154,12 +154,9 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     let newState: GameState = { ...gameState, clueStates: newClueStates }
 
     if (solved) {
-      const ans = await fetchAnswer(puzzle.id, clue.clue_order)
-      setAnswers((prev) => {
-        const next = [...prev]
-        next[clueIndex] = ans
-        return next
-      })
+      const { answer, firstName } = await fetchAnswer(puzzle.id, clue.clue_order)
+      setAnswers((prev) => { const n = [...prev]; n[clueIndex] = answer; return n })
+      setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = firstName ?? undefined; return n })
       // Auto-advance to next unsolved clue
       const next = puzzle.clues.findIndex(
         (_, j) => j !== clueIndex && !newClueStates[j].solved && !newClueStates[j].revealed
@@ -170,12 +167,9 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
         setTimeout(() => hiddenInputRef.current?.focus(), 50)
       }
     } else if (newGuesses.length >= MAX_GUESSES) {
-      const ans = await fetchAnswer(puzzle.id, clue.clue_order)
-      setAnswers((prev) => {
-        const next = [...prev]
-        next[clueIndex] = ans
-        return next
-      })
+      const { answer, firstName } = await fetchAnswer(puzzle.id, clue.clue_order)
+      setAnswers((prev) => { const n = [...prev]; n[clueIndex] = answer; return n })
+      setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = firstName ?? undefined; return n })
       newClueStates[clueIndex] = { ...newClueState, revealed: true }
       newState = { ...newState, clueStates: newClueStates }
       // Auto-advance
@@ -199,7 +193,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
 
   // Reveal all unsolved clues — used by give-up button and auto-fail at MAX_TOTAL_MISSES
   async function giveUpAll(currentState: GameState) {
-    const answerResults = await Promise.all(
+    const results = await Promise.all(
       puzzle.clues.map(async (clue, i) => {
         if (!currentState.clueStates[i].solved && !currentState.clueStates[i].revealed) {
           return fetchAnswer(puzzle.id, clue.clue_order)
@@ -210,7 +204,12 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
 
     setAnswers((prev) => {
       const next = [...prev]
-      answerResults.forEach((ans, i) => { if (ans !== undefined) next[i] = ans })
+      results.forEach((r, i) => { if (r !== undefined) next[i] = r.answer })
+      return next
+    })
+    setFirstNames((prev) => {
+      const next = [...prev]
+      results.forEach((r, i) => { if (r !== undefined) next[i] = r.firstName ?? undefined })
       return next
     })
 
@@ -233,13 +232,10 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     if (!gameState) return
 
     const clue = puzzle.clues[clueIndex]
-    const ans = await fetchAnswer(puzzle.id, clue.clue_order)
+    const { answer, firstName } = await fetchAnswer(puzzle.id, clue.clue_order)
 
-    setAnswers((prev) => {
-      const next = [...prev]
-      next[clueIndex] = ans
-      return next
-    })
+    setAnswers((prev) => { const n = [...prev]; n[clueIndex] = answer; return n })
+    setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = firstName ?? undefined; return n })
 
     const newClueStates = [...gameState.clueStates]
     newClueStates[clueIndex] = { ...gameState.clueStates[clueIndex], revealed: true }
@@ -347,6 +343,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
             state={gameState.clueStates[i]}
             onReveal={() => handleReveal(i)}
             answer={answers[i]}
+            firstName={firstNames[i]}
             disabled={gameState.completed}
             spineColumn={spineColumn}
             isActive={!gameState.completed && i === activeClueIndex}

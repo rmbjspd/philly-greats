@@ -26,12 +26,12 @@ export default function StatsModal({ open, onClose, stats, gameState, clues }: S
     ? Math.round((stats.gamesWon / stats.gamesPlayed) * 100)
     : 0
 
-  // Build distribution bars: total guesses range 4-24
-  const distEntries = Object.entries(stats.guessDistribution)
-    .map(([k, v]) => ({ guesses: parseInt(k), count: v }))
-    .sort((a, b) => a.guesses - b.guesses)
-
-  const maxCount = distEntries.reduce((m, e) => Math.max(m, e.count), 1)
+  const BUCKETS = ['0', '1', '2', '3', '4', 'gave_up']
+  const BUCKET_LABEL: Record<string, string> = {
+    '0': '0', '1': '1', '2': '2', '3': '3', '4': '4', 'gave_up': '✕',
+  }
+  const bucketCounts = BUCKETS.map((k) => stats.guessDistribution[k] || 0)
+  const maxCount = Math.max(1, ...bucketCounts)
 
   function handleShare() {
     if (!gameState) return
@@ -69,29 +69,30 @@ export default function StatsModal({ open, onClose, stats, gameState, clues }: S
           ))}
         </div>
 
-        {/* Distribution */}
-        {distEntries.length > 0 && (
+        {/* Miss distribution */}
+        {stats.gamesPlayed > 0 ? (
           <div>
             <h3 className="text-xs font-bold text-[#003594]/50 uppercase tracking-widest mb-2 text-center">
-              Guess Distribution
+              Miss Distribution
             </h3>
             <div className="space-y-1">
-              {distEntries.map(({ guesses, count }) => (
-                <div key={guesses} className="flex items-center gap-2">
-                  <span className="text-xs text-[#003594]/50 w-4 text-right">{guesses}</span>
-                  <div
-                    className="h-5 bg-[#003594] rounded-sm flex items-center px-1.5 transition-all"
-                    style={{ width: `${Math.max(8, (count / maxCount) * 100)}%` }}
-                  >
-                    <span className="text-xs font-bold text-white">{count}</span>
+              {BUCKETS.map((key, idx) => {
+                const count = bucketCounts[idx]
+                return (
+                  <div key={key} className="flex items-center gap-2">
+                    <span className="text-xs text-[#003594]/50 w-4 text-right">{BUCKET_LABEL[key]}</span>
+                    <div
+                      className="h-5 bg-[#003594] rounded-sm flex items-center px-1.5 transition-all"
+                      style={{ width: `${Math.max(8, (count / maxCount) * 100)}%` }}
+                    >
+                      <span className="text-xs font-bold text-white">{count}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
-        )}
-
-        {distEntries.length === 0 && stats.gamesPlayed === 0 && (
+        ) : (
           <p className="text-center text-[#003594]/40 text-sm">No games played yet.</p>
         )}
 

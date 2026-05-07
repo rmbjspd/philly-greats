@@ -77,33 +77,41 @@ const BARG_TEASERS = [
   "One generation beat the casino. The next one found bigger tables...",
   "Blackjack taught his father to see the deck differently. The lesson carried forward...",
   "His father's edge was mathematical. His son's edge is something else entirely...",
-  // Out-of-band IC / no org chart
-  "No org chart holds him — he contributes where others can't...",
-  "He solved problems that no one had thought to put in a job description...",
-  "The org chart shows what everyone else does. His work happens somewhere else...",
-  "He operates in the space between the boxes on the slide, which is where the real work is...",
-  "They tried to draw the org chart around him. The chart blinked first...",
-  "He contributes in the mode that only certain people understand is even possible...",
-  "Out-of-band, out-of-category, undeniably effective...",
-  "The kind of individual contributor who makes the entire org chart feel inadequate...",
-  "He shows up where he's needed, which is rarely where anyone expected...",
-  "The job description would take a paragraph. The results take much less space...",
-  "Some people fill roles. He invents the role while filling it...",
-  "He goes where the problem is, regardless of what the slide says his lane is...",
-  "An individual contributor who contributes the things that individuals can't define...",
-  "The org chart is a map. He's been operating in the territory the map forgot...",
-  "He doesn't have a title for what he does. The results have been unambiguous...",
-  // Alternative lifestyle community
-  "He found his own community, his own truth, just past the bridge...",
-  "He built the life that made sense to him, in the place that fit...",
-  "The community he found suits him better than any the city would have offered...",
-  "He lives among people who understand the things that matter, in Moorestown...",
-  "Some people search their whole lives for their community. He found his across the river...",
-  "The life he built looks exactly like the life he should have built...",
-  "He chose his people deliberately, and his people are lucky...",
-  "Moorestown holds his community, his truth, and most of his best stories...",
-  "The life he leads is the life he chose, which is rare and worth noting...",
-  "He found belonging in a place and a way that no one else would have predicted...",
+  // Out-of-band IC — no direct reports, paid above the band because HR made an exception
+  "No direct reports. Compensation that required a special approval. HR called it a band exception...",
+  "He manages no one and earns more than people who manage everyone...",
+  "Individual contributor. Zero direct reports. The pay stub made the HR business partner nervous...",
+  "They couldn't fit his comp into the IC band, so they bent the band instead...",
+  "The salary required three levels of approval because no IC band went that high...",
+  "HR policy says individual contributors earn this much. His offer letter disagreed...",
+  "He has never had a direct report. He has also never had a compensation conversation go normally...",
+  "The band exception memo has his name on it. HR keeps it in a special folder...",
+  "An IC whose total comp required a VP signature, and then a second VP signature...",
+  "Individual contributor, out-of-band pay, and a VP who signed off without blinking...",
+  "They debated whether to give him people to manage. They decided he was more valuable without them...",
+  "No one reports to him. The number on his W-2 suggests otherwise...",
+  "The HR system flags his comp every year. Every year someone overrides the flag...",
+  "He is proof that the IC track goes higher than the org chart suggests it can...",
+  "Out-of-band: the official term for what happens when someone is worth more than the policy allows...",
+  // Consensual polyamory
+  "He has more than one partner. All of them know. He organized it that way from the start...",
+  "Consensual non-monogamy suits him the way Moorestown does: perfectly and without apology...",
+  "Multiple people love him. All of them know about each other. He made sure of that early...",
+  "He built a relationship structure that works, which required more calendar discipline than most people have...",
+  "The ethical non-monogamy lifestyle found him, or he found it, and either way it fits...",
+  "He doesn't do things halfway. Not even love. Especially not love...",
+  "Multiple partners, full transparency, and a structure he designed himself because no template was good enough...",
+  "He has partners, plural, and a relationship philosophy that took years to articulate and minutes to recognize as right...",
+  "The people who love him are plural. The consent is enthusiastic. The logistics are impressive...",
+  "Polyamory suited him before he had a word for it. Now he has the word and the life...",
+  "He found that one relationship couldn't contain what he had to offer, and he handled that discovery with grace...",
+  "His partners know each other. It is organized. It works. This did not happen by accident...",
+  // Key parties at the Smith-Cadbury Mansion
+  "The Smith-Cadbury Mansion has hosted many things. Some of them involve a bowl near the door...",
+  "There is a particular evening at the Smith-Cadbury Mansion that several people remember differently and all remember fondly...",
+  "The key parties at the Smith-Cadbury Mansion are, by all accounts, well-run...",
+  "He knows the Smith-Cadbury Mansion the way some people know a favorite restaurant: the regulars, the good nights, the occasional surprise...",
+  "Whatever happens at the Smith-Cadbury Mansion stays there, except for the stories, which have traveled...",
   // Greatness / beats expectations
   "He shows up where he's needed and leaves the place better than he found it...",
   "The résumé wouldn't capture it. You'd have to see it to explain it...",
@@ -172,9 +180,19 @@ export default function AcrosticReveal({
     solved: clueStates[i]?.solved,
   }))
 
-  const winPct = stats.gamesPlayed > 0
-    ? Math.round((stats.gamesWon / stats.gamesPlayed) * 100)
-    : 0
+  const won = clueStates.every((cs) => cs.solved)
+  const totalMisses = clueStates.reduce((sum, cs) => {
+    if (cs.solved) return sum + cs.guesses.length - 1
+    return sum + cs.guesses.length
+  }, 0)
+  const currentBucket = won ? String(totalMisses) : 'gave_up'
+
+  const BUCKETS = ['0', '1', '2', '3', '4', 'gave_up']
+  const BUCKET_LABEL: Record<string, string> = {
+    '0': '0', '1': '1', '2': '2', '3': '3', '4': '4', 'gave_up': '✕',
+  }
+  const bucketCounts = BUCKETS.map((k) => stats.guessDistribution[k] || 0)
+  const maxCount = Math.max(1, ...bucketCounts)
 
   return (
     <div className="mt-12 flex flex-col items-start gap-8">
@@ -223,10 +241,10 @@ export default function AcrosticReveal({
       {/* Inline stats */}
       {showStats && (
         <div className="animate-[dissolve_0.8s_ease-in_both] flex flex-col gap-4 w-full max-w-xs">
+          {/* Summary stats row */}
           <div className="flex gap-6">
             {[
               { label: 'played', value: stats.gamesPlayed },
-              { label: 'win %', value: winPct },
               { label: 'streak', value: stats.currentStreak },
               { label: 'best', value: stats.maxStreak },
             ].map(({ label, value }) => (
@@ -236,6 +254,31 @@ export default function AcrosticReveal({
               </div>
             ))}
           </div>
+
+          {/* Miss histogram */}
+          <div className="space-y-1">
+            {BUCKETS.map((key, idx) => {
+              const count = bucketCounts[idx]
+              const highlight = key === currentBucket
+              return (
+                <div key={key} className="flex items-center gap-2">
+                  <span className="text-xs text-[#003594]/50 w-4 text-right">{BUCKET_LABEL[key]}</span>
+                  <div
+                    className={cn(
+                      'h-5 rounded-sm flex items-center px-1.5 transition-all',
+                      highlight ? 'bg-[#FDB912]' : 'bg-[#003594]'
+                    )}
+                    style={{ width: `${Math.max(8, (count / maxCount) * 100)}%` }}
+                  >
+                    <span className={cn('text-xs font-bold', highlight ? 'text-[#003594]' : 'text-white')}>
+                      {count}
+                    </span>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
           <button
             onClick={onShare}
             className="text-sm font-bold text-[#003594] border border-[#003594]/30 hover:bg-[#003594]/5 px-4 py-2 transition-colors w-fit"

@@ -66,25 +66,25 @@ export function updateStatsOnComplete(gameState: GameState): void {
   if (won) {
     stats.gamesWon += 1
     stats.currentStreak += 1
-    if (stats.currentStreak > stats.maxStreak) {
-      stats.maxStreak = stats.currentStreak
-    }
-
-    // Count total guesses across all clues
-    const totalGuesses = gameState.clueStates.reduce(
-      (sum, s) => sum + s.guesses.length,
-      0
-    )
-    const key = String(totalGuesses)
-    stats.guessDistribution[key] = (stats.guessDistribution[key] || 0) + 1
+    if (stats.currentStreak > stats.maxStreak) stats.maxStreak = stats.currentStreak
   } else {
     stats.currentStreak = 0
   }
+
+  // Miss distribution: wrong guesses across all clues, or 'gave_up'
+  const totalMisses = gameState.clueStates.reduce((sum, cs) => {
+    if (cs.solved) return sum + cs.guesses.length - 1
+    return sum + cs.guesses.length
+  }, 0)
+  const key = won ? String(totalMisses) : 'gave_up'
+  stats.guessDistribution[key] = (stats.guessDistribution[key] || 0) + 1
 
   saveStats(stats)
 }
 
 export function getShareText(gameState: GameState, clues: PuzzleClue[]): string {
+  const spineColumn = Math.max(...clues.map((c) => c.letter_index))
+
   // Total wrong guesses across all clues
   const totalMisses = gameState.clueStates.reduce((sum, cs) => {
     if (cs.solved) return sum + cs.guesses.length - 1
@@ -94,9 +94,9 @@ export function getShareText(gameState: GameState, clues: PuzzleClue[]): string 
 
   const allSolved = gameState.clueStates.every((cs) => cs.solved)
 
-  // No leading spacers — keeps rows ≤ answer_length (≤10) so iMessage doesn't wrap
   const rows = clues.map((clue, i) => {
     const cs = gameState.clueStates[i]
+    const spacers = spineColumn - clue.letter_index
     const preCount = clue.letter_index
     const postCount = clue.answer_length - clue.letter_index - 1
 
@@ -110,7 +110,12 @@ export function getShareText(gameState: GameState, clues: PuzzleClue[]): string 
       acrostic = '⬛'
     }
 
-    return fill.repeat(preCount) + acrostic + fill.repeat(postCount)
+    return (
+      '⬜'.repeat(spacers) +
+      fill.repeat(preCount) +
+      acrostic +
+      fill.repeat(postCount)
+    )
   })
 
   const solved = gameState.clueStates.filter((cs) => cs.solved).length

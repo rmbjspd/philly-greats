@@ -14,6 +14,14 @@ import AcrosticReveal from './AcrosticReveal'
 import StatsModal from './StatsModal'
 
 const MAX_GUESSES = 6
+const MAX_TOTAL_MISSES = 5
+
+function countTotalMisses(states: ClueState[]): number {
+  return states.reduce((sum, cs) => {
+    if (cs.solved) return sum + cs.guesses.length - 1
+    return sum + cs.guesses.length
+  }, 0)
+}
 
 function makeInitialClueState(): ClueState {
   return { guesses: [], solved: false, revealed: false }
@@ -134,6 +142,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
 
     if (!res.ok) return
     const { correct } = await res.json()
+    setCurrentInput('') // clear after server responds — eliminates the flash on last letter
 
     const newGuesses = [...currentState.guesses, guess]
     const solved = correct
@@ -175,14 +184,49 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
       )
       if (next !== -1) {
         setActiveClueIndex(next)
-        setCurrentInput('')
         setTimeout(() => hiddenInputRef.current?.focus(), 50)
       }
+    } else if (countTotalMisses(newClueStates) >= MAX_TOTAL_MISSES) {
+      // Auto-fail: 5 total wrong guesses across all clues
+      await giveUpAll(newState)
+      return
     }
 
     saveGameState(newState)
     const finalState = checkCompletion(newState)
     setGameState(finalState)
+  }
+
+  // Reveal all unsolved clues — used by give-up button and auto-fail at MAX_TOTAL_MISSES
+  async function giveUpAll(currentState: GameState) {
+    const answerResults = await Promise.all(
+      puzzle.clues.map(async (clue, i) => {
+        if (!currentState.clueStates[i].solved && !currentState.clueStates[i].revealed) {
+          return fetchAnswer(puzzle.id, clue.clue_order)
+        }
+        return undefined
+      })
+    )
+
+    setAnswers((prev) => {
+      const next = [...prev]
+      answerResults.forEach((ans, i) => { if (ans !== undefined) next[i] = ans })
+      return next
+    })
+
+    const newClueStates = currentState.clueStates.map((cs) =>
+      cs.solved || cs.revealed ? cs : { ...cs, revealed: true }
+    )
+    const newState: GameState = { ...currentState, clueStates: newClueStates, completed: true }
+    saveGameState(newState)
+    updateStatsOnComplete(newState)
+    setStats(getStats())
+    setGameState(newState)
+  }
+
+  async function handleGiveUp() {
+    if (!gameState || gameState.completed) return
+    await giveUpAll(gameState)
   }
 
   async function handleReveal(clueIndex: number) {
@@ -260,7 +304,6 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
           // Auto-submit when all boxes are filled
           if (filtered.length === activeClue.answer_length && filtered.length > 0) {
             handleGuess(activeClueIndex, filtered)
-            setCurrentInput('')
           }
         }}
         onKeyDown={(e) => {
@@ -268,7 +311,6 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
             e.preventDefault()
             if (currentInput.length > 0) {
               handleGuess(activeClueIndex, currentInput)
-              setCurrentInput('')
             }
           }
         }}
@@ -313,6 +355,18 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
           />
         ))}
       </div>
+
+      {/* Give-up button */}
+      {!gameState.completed && (
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={handleGiveUp}
+            className="text-xs text-[#003594]/25 hover:text-[#003594]/50 transition-colors"
+          >
+            i give up
+          </button>
+        </div>
+      )}
 
       {/* Acrostic reveal when complete */}
       {gameState.completed && (

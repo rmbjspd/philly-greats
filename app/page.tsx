@@ -55,11 +55,13 @@ async function logVisit(date: string) {
     h.get('x-forwarded-for')?.split(',')[0]?.trim() ??
     h.get('x-real-ip') ??
     'unknown'
+  const city = h.get('x-vercel-ip-city') ?? null
+  const country = h.get('x-vercel-ip-country') ?? null
   const { error } = await supabaseServer
     .from('visits')
-    .insert({ puzzle_date: date, ip_address: ip })
+    .insert({ puzzle_date: date, ip_address: ip, city, country })
   if (error) console.error('[visits insert]', error.message, error.details)
-  else console.log('[visits insert] ok', date, ip)
+  else console.log('[visits insert] ok', date, ip, city, country)
 }
 
 export default async function Home() {

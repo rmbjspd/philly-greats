@@ -20,11 +20,17 @@ function dayName(dateStr: string): string {
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
+type IPEntry = {
+  ip: string
+  city: string | null
+  country: string | null
+}
+
 type DayStat = {
   puzzle_date: string
   total_plays: number
   unique_ips: number
-  ips: string[]
+  ips: IPEntry[]
 }
 
 type UpcomingClue = {
@@ -47,26 +53,34 @@ async function fetchStats(): Promise<DayStat[]> {
     const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
     const { data, error } = await supabaseServer
       .from('visits')
-      .select('puzzle_date, ip_address')
+      .select('puzzle_date, ip_address, city, country')
       .gte('created_at', since)
 
     if (error || !data) return []
 
-    const ipsByDate = new Map<string, Set<string>>()
+    const ipsByDate = new Map<string, Map<string, { city: string | null; country: string | null }>>()
     const playsByDate = new Map<string, number>()
     for (const row of data) {
       const d = row.puzzle_date as string
-      if (!ipsByDate.has(d)) ipsByDate.set(d, new Set())
-      ipsByDate.get(d)!.add(row.ip_address as string)
+      const ip = row.ip_address as string
+      if (!ipsByDate.has(d)) ipsByDate.set(d, new Map())
+      if (!ipsByDate.get(d)!.has(ip)) {
+        ipsByDate.get(d)!.set(ip, {
+          city: (row.city as string | null) ?? null,
+          country: (row.country as string | null) ?? null,
+        })
+      }
       playsByDate.set(d, (playsByDate.get(d) ?? 0) + 1)
     }
 
     return [...ipsByDate.entries()]
-      .map(([date, ipSet]) => ({
+      .map(([date, ipMap]) => ({
         puzzle_date: date,
         total_plays: playsByDate.get(date) ?? 0,
-        unique_ips: ipSet.size,
-        ips: [...ipSet].sort(),
+        unique_ips: ipMap.size,
+        ips: [...ipMap.entries()]
+          .map(([ip, loc]) => ({ ip, city: loc.city, country: loc.country }))
+          .sort((a, b) => a.ip.localeCompare(b.ip)),
       }))
       .sort((a, b) => b.puzzle_date.localeCompare(a.puzzle_date))
   } catch {
@@ -146,9 +160,14 @@ function StatTable({ stats }: { stats: DayStat[] }) {
                     show {row.unique_ips} IP{row.unique_ips !== 1 ? 's' : ''}
                   </summary>
                   <div className="mt-2 space-y-0.5">
-                    {row.ips.map((ip) => (
-                      <div key={ip} className="font-mono text-xs text-zinc-300">
-                        {ip}
+                    {row.ips.map(({ ip, city, country }) => (
+                      <div key={ip} className="font-mono text-xs text-zinc-300 flex gap-2">
+                        <span>{ip}</span>
+                        {(city || country) && (
+                          <span className="text-zinc-500 font-sans">
+                            {[city, country].filter(Boolean).join(', ')}
+                          </span>
+                        )}
                       </div>
                     ))}
                   </div>

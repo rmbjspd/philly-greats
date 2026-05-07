@@ -118,19 +118,6 @@ export default function ClueCard({
             <div key={`sp-${i}`} style={{ width: BOX, height: BOX, flexShrink: 0 }} />
           ))}
 
-          {/* First name — appears when answer is revealed/solved */}
-          {showAnswer && firstName && (
-            <span
-              className={cn(
-                'text-[11px] font-semibold tracking-wide shrink-0 mr-0.5',
-                state.solved ? 'text-[#003594]/50' : 'text-[#003594]/30'
-              )}
-              style={{ lineHeight: `${BOX}px` }}
-            >
-              {firstName}
-            </span>
-          )}
-
           {/* All letter boxes */}
           {Array.from({ length: totalBoxes }).map((_, i) => {
             const isHighlight = i === clue.letter_index
@@ -148,6 +135,19 @@ export default function ClueCard({
               />
             )
           })}
+
+          {/* First name — appears when answer is revealed/solved, after boxes so it doesn't shift alignment */}
+          {showAnswer && firstName && (
+            <span
+              className={cn(
+                'text-[11px] font-semibold tracking-wide shrink-0 ml-1',
+                state.solved ? 'text-[#003594]/50' : 'text-[#003594]/30'
+              )}
+              style={{ lineHeight: `${BOX}px` }}
+            >
+              {firstName}
+            </span>
+          )}
 
           {/* Clue text — inline on sm+, hidden here on mobile */}
           <span

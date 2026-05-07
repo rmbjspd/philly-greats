@@ -1,0 +1,102 @@
+PHILLY SPORTS TRIVIA GURU — REVIEW SESSION
+Model: claude-opus-4-7 (general-purpose subagent, answers shielded)
+Date: 2026-05-07
+Clues reviewed: 132 across 33 puzzles
+
+════════════════════════════════════════════════════════════════════════
+SCORE: ~100/132  (76%)
+════════════════════════════════════════════════════════════════════════
+
+WRONG GUESSES
+─────────────────────────────────────────────────────────────────────
+05-07 [A]  WATKINS     guessed: MATTHEWS     (Seahawks pick confusion)
+05-09 [G]  INGE        guessed: BELL         (too obscure — spring training cut)
+05-10 [G]  MAGEE       missed               (too obscure)
+05-12 [B]  BASKETT     guessed: PINKSTON     (clue too generic — FIXED)
+05-13 [R]  RIVERS      guessed: BROWN        (valid ambiguity)
+05-14 [B]  BARBER      guessed: SCHULTZ      (Bill Barber is era-specific)
+05-14 [G]  GAGNE       guessed: LINDROS      (concussion angle reads as Lindros)
+05-15 [B]  BLAKE       guessed: FEELEY       (Jeff Blake, one year in Philly)
+05-17 [A]  VANHORN     guessed: DOLEAC       (salary dump obscure)
+05-19 [R]  ERTZ        guessed: FOLES        (clue said "Philly Special" — wrong play for Ertz — FIXED)
+05-19 [G]  GEORGE      guessed: FLUTIE       (Eddie George's 2004 Eagles stint)
+05-20 [G]  GARGANO     guessed: BOYLE        (production credit too obscure)
+05-22 [G]  YOUNG       guessed: NOEL         (early Process depth too thin)
+05-23 [G]  GORE        guessed: JAMES        (too obscure; "hall-bound" dated — FIXED)
+05-24 [B]  DALEMBERT   guessed: MATUMBO      (Haitian flag detail not enough)
+05-28 [A]  SKALICKY    guessed: CARKNER      (needs stronger hook, left as-is per request)
+05-29 [R]  LINDROS     guessed correctly but clue had GEOGRAPHY ERROR (Rangers, not Toronto — FIXED)
+06-01 [G]  HOYING      guessed: DETMER       (stopgap QBs blur together)
+06-02 [A]  ALLEN       guessed: VINCENT      (Eric Allen vs Todd Pinkston etc)
+06-02 [G]  GRATTON     guessed: LECLAIR      (Flyers big-contract era)
+06-03 [G]  HUGHES      guessed: IGUODALA     (Iverson backcourt era confusion)
+06-04 [R]  HARRIS      guessed: WEBBER       (Tobias Harris era not well-known)
+06-05 [B]  BENNETT     missed               (backup catcher depth)
+06-05 [A]  CARTER      guessed: GAGNE        (Richards/Carter trade details)
+06-05 [R]  RUNYAN      guessed: THOMAS       (OL depth)
+06-06 [R]  JOYNER      guessed: WHITE        (Seth Joyner vs Reggie White confusion)
+06-06 [G]  HARRINGTON  guessed correctly but FLAGGED YEAR ERROR in clue ("2007 backup" — year may be off)
+06-07 [B]  BATTIE      guessed: EVANS        (post-Iverson roster filler)
+06-07 [A]  THOMAS      guessed: IGUODALA     (Iverson-trade fallout era)
+
+════════════════════════════════════════════════════════════════════════
+GURU'S CRITIQUE (verbatim from session)
+════════════════════════════════════════════════════════════════════════
+
+BEST SINGLE CLUE IN THE SET:
+"Eskin swore he'd had Coronas before practice." (IVERSON, 05-11 R)
+Eleven words, zero wasted. Tells the entire story of that era — Eskin
+overreaching, Iverson's combustibility, WIP at its most unhinged —
+without naming a single name. That's the standard every clue should
+aspire to.
+
+TOP 5 CLUES:
+1. "Eskin swore he'd had Coronas before practice." (IVERSON)
+2. "Admitted beaning Harper on purpose. WIP thought: relatable." (HAMELS)
+3. "Banner let him walk to Denver. WIP raged for years." (DAWKINS)
+4. "Wide zone, 1997 NLCS Game 5." (GREGG — quietly brilliant, Philly-adjacent without being Philly)
+5. "41-for-41 in saves. Knees in the Citizens Bank dirt." (LIDGE)
+
+WEAKEST / MOST FLAGGED CLUES:
+1. INGE (05-09 G) — spring training cut. Not puzzle material, roster footnote.
+2. GORE (05-23 G) — "Hall-bound" dated, one forgettable season, no WIP peg. TWEAKED.
+3. ERTZ (05-19 R) — factual error: "Philly Special" was Foles catching, not Ertz. FIXED.
+4. GARGANO (05-20 G) — production credit for niche documentary. Even WIP obsessives can't name the producer.
+5. SKALICKY (05-28 A) — "bottle rocket" is great flavor, not a knowledge peg. Left as-is per request.
+
+PATTERNS NOTED:
+- "WIP debated every one" is used as a crutch on several clues. Show the debate, don't tell it.
+- Several June clues missing sport/media tags — inconsistent, removes domain signal. ALL FIXED.
+- Late-90s/early-2000s era well-represented. Process-era Sixers thin. Post-2020 Eagles thin.
+- Hockey clues are the hardest for solvers outside the Spectrum faithful.
+- GAGNE confusion: "eight concussions" reads as Lindros to almost everyone.
+  (Left as-is per request — solver will figure it out.)
+- Strong bias toward baseball, which is probably right for a Philly puzzle.
+
+FACTUAL FLAGS RAISED (addressed or noted):
+- ERTZ clue: "Philly Special" incorrect for Ertz → FIXED
+- LINDROS clue: "traded to Toronto" incorrect (was Rangers) → FIXED
+- HARRINGTON clue: "2007 backup" year may be off → noted, not changed
+
+════════════════════════════════════════════════════════════════════════
+CHANGES MADE AFTER REVIEW
+════════════════════════════════════════════════════════════════════════
+✓ 05-19 [R] ERTZ       "Caught the TD that briefly wasn't. Super Bowl LII. (football)"
+✓ 05-23 [G] GORE       "Hall of Famer's lone Eagles season. (football)"
+✓ 05-29 [R] LINDROS    "His parents called out Clarke over the concussions. WIP took sides. (hockey)"
+✓ 05-12 [B] BASKETT    "Muffed the Saints' Super Bowl onside kick. Hands team. (football)"
+✓ 06-01 [R] HARPER     added (baseball) tag
+✓ 06-02 [A] ALLEN      added (football) tag
+✓ 06-02 [G] GRATTON    added (hockey) tag
+✓ 06-03 [A] AKERS      added (football) tag
+✓ 06-04 [R] HARRIS     added (basketball) tag
+✓ 06-05 [B] BENNETT    added (baseball) tag
+✓ 06-05 [A] CARTER     added (hockey) tag
+✓ 06-05 [R] RUNYAN     added (football) tag
+✓ 06-05 [G] COLANGELO  added (basketball) tag
+✓ 06-06 [R] JOYNER     added (football) tag
+
+NOT CHANGED (per instruction):
+  INGE (05-09 G) — kept
+  SKALICKY (05-28 A) — kept
+  GAGNE (05-14 G) — kept

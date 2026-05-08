@@ -152,7 +152,8 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     let newState: GameState = { ...gameState, clueStates: newClueStates }
 
     if (solved) {
-      // Fetch display text in background — state updates below show dark boxes immediately
+      // Show guess letters immediately; fetchAnswer fills in canonical form in background
+      setAnswers((prev) => { const n = [...prev]; n[clueIndex] = guess; return n })
       fetchAnswer(puzzle.id, clue.clue_order).then(({ answer, firstName }) => {
         setAnswers((prev) => { const n = [...prev]; n[clueIndex] = answer; return n })
         setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = firstName ?? undefined; return n })

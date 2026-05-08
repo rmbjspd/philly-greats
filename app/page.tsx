@@ -1,9 +1,18 @@
 export const dynamic = 'force-dynamic'
 
+import { createHash } from 'crypto'
 import { headers } from 'next/headers'
 import { Puzzle } from '@/types/game'
 import { supabase, supabaseServer } from '@/lib/supabase'
 import GameBoard from '@/components/GameBoard'
+
+function normalizeAnswer(str: string): string {
+  return str.toLowerCase().replace(/[\s''\-]/g, '')
+}
+
+function answerHash(answer: string): string {
+  return createHash('sha256').update(normalizeAnswer(answer)).digest('hex')
+}
 
 function getTodayET(): string {
   const now = new Date()
@@ -45,6 +54,7 @@ async function getPuzzle(): Promise<Puzzle | null> {
       acrostic_letter: c.acrostic_letter,
       answer: '',
       answer_length: Math.min((c.answer as string).length, 10),
+      answer_hash: answerHash(c.answer as string),
     })),
   }
 }

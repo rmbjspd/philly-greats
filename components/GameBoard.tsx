@@ -16,6 +16,15 @@ import StatsModal from './StatsModal'
 const MAX_GUESSES = 6
 const MAX_TOTAL_MISSES = 5
 
+function normalizeGuess(str: string): string {
+  return str.toLowerCase().replace(/[\s''\-]/g, '')
+}
+
+async function sha256(str: string): Promise<string> {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('')
+}
+
 function countTotalMisses(states: ClueState[]): number {
   return states.reduce((sum, cs) => {
     if (cs.solved) return sum + cs.guesses.length - 1
@@ -130,18 +139,8 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     if (currentState.solved || currentState.revealed) return
     if (currentState.guesses.length >= MAX_GUESSES) return
 
-    const res = await fetch('/api/check', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        puzzle_id: puzzle.id,
-        clue_order: clue.clue_order,
-        guess,
-      }),
-    })
-
-    if (!res.ok) return
-    const { correct, answer: checkedAnswer, first_name: checkedFirstName } = await res.json()
+    const guessHash = await sha256(normalizeGuess(guess))
+    const correct = guessHash === clue.answer_hash
 
     const newGuesses = [...currentState.guesses, guess]
     const solved = correct
@@ -153,15 +152,17 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     let newState: GameState = { ...gameState, clueStates: newClueStates }
 
     if (solved) {
-      setAnswers((prev) => { const n = [...prev]; n[clueIndex] = checkedAnswer; return n })
-      setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = checkedFirstName ?? undefined; return n })
+      // Fetch display text in background — state updates below show dark boxes immediately
+      fetchAnswer(puzzle.id, clue.clue_order).then(({ answer, firstName }) => {
+        setAnswers((prev) => { const n = [...prev]; n[clueIndex] = answer; return n })
+        setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = firstName ?? undefined; return n })
+      })
       // Auto-advance to next unsolved clue
       const next = puzzle.clues.findIndex(
         (_, j) => j !== clueIndex && !newClueStates[j].solved && !newClueStates[j].revealed
       )
       if (next !== -1) {
         setActiveClueIndex(next)
-        setCurrentInput('')
         setTimeout(() => hiddenInputRef.current?.focus(), 50)
       }
     } else if (newGuesses.length >= MAX_GUESSES) {
@@ -184,7 +185,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
       return
     }
 
-    if (!solved) setCurrentInput('')
+    setCurrentInput('')
     saveGameState(newState)
     const finalState = checkCompletion(newState)
     setGameState(finalState)

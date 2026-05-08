@@ -7,6 +7,7 @@ export interface PuzzleClue {
   answer: string        // returned from API after solve or on give-up
   first_name?: string   // returned from API alongside answer
   answer_length: number // populated server-side; answer itself is never sent to client
+  answer_hash: string   // SHA-256 of normalized answer for client-side checking
   letter_index: number  // which letter of answer feeds into BARG
   acrostic_letter: AcrosticLetter
 }

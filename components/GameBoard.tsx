@@ -142,7 +142,6 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
 
     if (!res.ok) return
     const { correct } = await res.json()
-    setCurrentInput('') // clear after server responds — eliminates the flash on last letter
 
     const newGuesses = [...currentState.guesses, guess]
     const solved = correct
@@ -186,6 +185,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
       return
     }
 
+    if (!solved) setCurrentInput('')
     saveGameState(newState)
     const finalState = checkCompletion(newState)
     setGameState(finalState)

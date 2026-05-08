@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
   const { data: clue, error } = await supabaseServer
     .from('puzzle_clues')
-    .select('answer')
+    .select('answer, first_name')
     .eq('puzzle_id', puzzle_id)
     .eq('clue_order', clue_order)
     .single()
@@ -35,5 +35,8 @@ export async function POST(request: NextRequest) {
 
   const correct = normalize(clue.answer) === normalize(guess)
 
+  if (correct) {
+    return NextResponse.json({ correct, answer: clue.answer, first_name: clue.first_name ?? null })
+  }
   return NextResponse.json({ correct })
 }

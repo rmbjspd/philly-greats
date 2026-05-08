@@ -141,7 +141,7 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     })
 
     if (!res.ok) return
-    const { correct } = await res.json()
+    const { correct, answer: checkedAnswer, first_name: checkedFirstName } = await res.json()
 
     const newGuesses = [...currentState.guesses, guess]
     const solved = correct
@@ -153,9 +153,8 @@ export default function GameBoard({ puzzle }: GameBoardProps) {
     let newState: GameState = { ...gameState, clueStates: newClueStates }
 
     if (solved) {
-      const { answer, firstName } = await fetchAnswer(puzzle.id, clue.clue_order)
-      setAnswers((prev) => { const n = [...prev]; n[clueIndex] = answer; return n })
-      setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = firstName ?? undefined; return n })
+      setAnswers((prev) => { const n = [...prev]; n[clueIndex] = checkedAnswer; return n })
+      setFirstNames((prev) => { const n = [...prev]; n[clueIndex] = checkedFirstName ?? undefined; return n })
       // Auto-advance to next unsolved clue
       const next = puzzle.clues.findIndex(
         (_, j) => j !== clueIndex && !newClueStates[j].solved && !newClueStates[j].revealed

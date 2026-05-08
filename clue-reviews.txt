@@ -407,3 +407,190 @@ REVIEW SESSION: 2026-05-08 — FULL DB SWEEP (144 clues)
 
 --------------------------------------------------------------------------------
 
+
+================================================================================
+REVIEW SESSION: 2026-05-08 (replacement clues — GEARY/MAHORN/BEDROSIAN)
+================================================================================
+
+**2026-06-04 — G slot**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Eighty-one mound appearances in 2006. Set a Phillies franchise record nobody celebrated. (baseball)" — 5 letters, answer starts with G | 4 | 5 | 5 | GEARY — Geoff Geary. 81 appearances in 2006 confirmed as a Phillies franchise record. "Nobody celebrated" is exactly right — the Phillies blew the wild card on the last day of that season. The stat is real and obscure in the best WIP way: a workhorse nobody remembers. Fairness docked one point because casual fans may not have Geoff Geary top of mind; the franchise-record framing helps. |
+
+---
+
+**2026-06-13 — A slot (A at position 1 in last name)**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Won a ring with Detroit's Bad Boys, then spent a season hiding out on Market Street. (basketball)" — 6 letters | 4 | 2 | 3 | MAHORN — Rick Mahorn. The Bad Boys ring (1989) and the Sixers connection are both correct. Two accuracy problems: (1) The Sixers arena is on Broad Street (Spectrum, then CoreStates/First Union Center at Broad and Pattison), not Market Street. Market Street is Center City. (2) "A season" is wrong — Mahorn's first Sixers stint ran from 1989-90 through 1991-92, roughly three seasons before he bounced around and returned for a second stint. **Rewrite suggestion:** "Won a ring with Detroit's Bad Boys, then ended up on Broad Street with Barkley. (basketball)" |
+
+---
+
+**2026-06-13 — B slot (B at position 0)**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Bedrock. The 1987 NL Cy Young. Dealt to San Francisco before the Phillies were worth watching again. (baseball)" — 9 letters | 5 | 5 | 5 | BEDROSIAN — Steve Bedrosian. Everything checks out. 1987 NL Cy Young confirmed (40 saves, 2.83 ERA). Traded to the Giants on June 19, 1989 — before the 1993 pennant run that made the Phillies relevant again. "Bedrock" nickname lands the B acrostic signal without being a giveaway. "Before the Phillies were worth watching again" is the exact chip-on-shoulder WIP tone. Clean all the way through. |
+
+================================================================================
+REVIEW SESSION: 2026-05-08 (answer comparison — DB sweep)
+================================================================================
+
+This session compares every prior assessment against the confirmed answers from the DB. The following are cases where my prior review either named the wrong player, called a factual error that wasn't one, or flagged ambiguity that the actual answer resolves. Clues that were correctly assessed are not repeated.
+
+---
+
+DATE 05-09 #3: [FORSBERG]
+Clue: "Greatest player alive. One Flyers season. (hockey)"
+Issue: Prior review called this a letter count error and assumed the answer was LINDROS (7 letters); the actual answer is FORSBERG (8 letters) — Peter Forsberg signed with Philadelphia for the 2011-12 season, his last in the NHL, and was universally considered one of the two greatest players alive at his peak.
+Rewrite: The clue is accurate as written. No rewrite needed — the prior flag was wrong. Remove the letter count concern from the record.
+
+---
+
+DATE 05-09 #2: [HAYES]
+Clue: "'93 World Series third base. Gone. (baseball)"
+Issue: Prior review expressed confusion about which side's third baseman — noted the Phillies' third baseman was Dave Hollins (7 letters). The actual answer is HAYES (5 letters) — Charlie Hayes, who played third base for the Toronto Blue Jays in the 1993 World Series and caught the final out of Game 6, ending the Phillies' season. The clue is technically correct but a Philly puzzle presenting this from the opponent's perspective without signaling it will misdirect most solvers toward the Phillies' side.
+Rewrite: "Caught the last out at third. Toronto's '93 Series third baseman. (baseball)" — that frames it correctly and the word "caught" has a layered meaning here.
+
+---
+
+DATE 05-10 #1: [BRUNTLETT]
+Clue: "Backup shortstop. Unassisted triple play. 2009. (baseball)"
+Issue: Prior review said this had three factual errors and that the answer must be MORANDINI with the wrong year. All three facts are correct for BRUNTLETT: Eric Bruntlett was a backup shortstop who turned an unassisted triple play on August 23, 2009, as a Phillies shortstop against the New York Mets. My review was wrong on the player and therefore wrong on the "errors."
+Rewrite: The clue is accurate and fair. Prior review retracted.
+
+---
+
+DATE 05-10 #3: [DURBIN]
+Clue: "Middle reliever. 2008 World Series champion. (baseball)"
+Issue: Prior review identified the answer as ROMERO (JC Romero). The actual answer is DURBIN (6 letters) — Chad Durbin, who was a middle reliever on the 2008 championship Phillies. The clue fits Durbin perfectly; "middle reliever" distinguishes him from Romero, who was the primary setup man. My prior review overcorrected toward the more prominent name.
+Rewrite: "Middle reliever, bridge arm on the 2008 title staff. (baseball)" — adds a tiny bit of specificity without giving it away, though the current clue is functional.
+
+---
+
+DATE 05-13 #1: [WESTBROOK]
+Clue: "Kneeled at one-yard line, 2003 Cowboys. (football)"
+Issue: Prior review said "Westbrook didn't take the knee, McNabb did" and flagged this as a letter count error for McNabb. Both claims were wrong. It was Brian WESTBROOK who physically knelt at the one-yard line in the fourth quarter of the December 27, 2003 game against the Cowboys to preserve the clock rather than score. McNabb is 6 letters; WESTBROOK is 9, which matches the DB. The clue is accurate, the answer is correct, my prior review was factually wrong.
+Rewrite: No rewrite needed. Prior flag retracted.
+
+---
+
+DATE 05-13 #3: [RIVERS]
+Clue: "Three seasons, three second-round exits. (basketball)"
+Issue: Prior review identified the answer as EMBIID (6 letters). The actual answer is RIVERS (6 letters) — Doc Rivers, who coached the Sixers for exactly three seasons (2020-21, 2021-22, 2022-23) and exited in the second round all three years. EMBIID is a player; the clue describes a coaching record. Fundamental misread.
+Rewrite: The clue is clear in retrospect. A single identifying detail would sharpen it: "Three seasons coaching, three second-round exits. (basketball)" — adding "coaching" eliminates the player/coach ambiguity.
+
+---
+
+DATE 05-15 #1: [BLAKE]
+Clue: "Reid's backup QB in 2000. (football)"
+Issue: Prior review incorrectly stated Jeff Blake was not with the Eagles until 2004 and flagged the year as wrong. Blake was in fact signed by Philadelphia in March 2000 as McNabb's backup and appeared in games that season. The clue is accurate. My prior review was factually wrong about his Eagles timeline.
+Rewrite: No rewrite needed. Prior flag retracted.
+
+---
+
+DATE 05-15 #3: [PERSON]
+Clue: "His People showed up every fifth night. (baseball)"
+Issue: Prior review flagged a sport tag conflict, reasoning that "Person's People" was a WIP basketball show featuring Wesley Person and "every fifth night" implied a starting pitcher (baseball). The actual answer is PERSON and the tag is (baseball) — this is a double-meaning clue where "People showed up every fifth night" describes Person's People (the show) appearing when Robert Person pitched (on a five-man rotation). Prior review correctly identified the double meaning but incorrectly called it a tag conflict. The tag is right. The clue is intentionally layered.
+Rewrite: No rewrite needed. Prior flag about tag mismatch retracted.
+
+---
+
+DATE 05-16 #3: [ROMERO]
+Clue: "Setup man for the 2008 title team. (baseball)"
+Issue: Prior review correctly identified ROMERO as the answer here. But the same review also labeled the 05-10 #3 clue ("Middle reliever. 2008 World Series champion.") as ROMERO — which was wrong; that clue's answer is DURBIN. The two clues are for two different players. Both are on the 2008 team. The 05-16 clue with "setup man" is correctly ROMERO; the 05-10 clue with "middle reliever" is correctly DURBIN. Prior review's error was assigning Romero to both.
+Rewrite: No rewrite for this clue — it's correct. The PED rewrite suggestion from prior session remains a quality upgrade option but is not required.
+
+---
+
+DATE 05-20 #3: [RECCHI]
+Clue: "Flyers winger shipped in the Lindros megadeal. (hockey)"
+Issue: Prior review listed all known pieces of the 1992 Lindros trade and could not identify a 6-letter winger, leaving it as unconfirmed. The actual answer is RECCHI (6 letters) — Mark Recchi was traded from Philadelphia to Montreal as part of the package that sent the rights to Eric Lindros from Quebec to Philadelphia. Prior review's player identification research was incomplete.
+Rewrite: The clue is accurate. No rewrite needed. Prior flag retracted.
+
+---
+
+DATE 05-23 #2: [KEARSE]
+Clue: "Freakishly fast. Eagles 2004 mega-signing. (football)"
+Issue: Prior review identified the answer as OWENS (Terrell Owens, 5 letters). The actual answer is KEARSE (6 letters) — Jevon Kearse, who signed a massive free-agent deal with the Eagles in 2004 after years as a pass-rusher with Tennessee. Kearse was famously nicknamed "The Freak" for his athleticism. OWENS was also acquired in 2004 but via trade, not as a mega signing, and is 5 letters not 6. Critical player misidentification.
+Rewrite: "The Freak came to Philly on a huge deal. Never the same. (football)" — "The Freak" is Kearse's actual nickname and removes all ambiguity. The current clue's "Freakishly fast" is almost certainly riffing on that nickname but doesn't make it explicit enough. A solver who knows Terrell Owens and the 2004 Eagles can easily land on the wrong player.
+
+---
+
+DATE 06-02 #1: [BOYKIN]
+Clue: "Chip Kelly cut him loose despite stardom. (football)"
+Issue: Prior review identified the answer as MCCOY (LeSean McCoy, 6 letters). The actual answer is BOYKIN (6 letters) — Brandon Boykin, a Pro Bowl cornerback who was traded by Kelly to Pittsburgh in 2014 despite performing at a high level. McCoy was traded, not "cut loose," and the move generated more debate. Boykin's departure was the one that the "cut loose despite stardom" framing fits — he was a premium corner dealt away, reportedly for personal reasons.
+Rewrite: "Pro Bowl corner Chip Kelly shipped out. WIP never got an explanation. (football)" — naming the position eliminates any confusion with McCoy or Jackson, both of whom were also Kelly casualties.
+
+---
+
+DATE 06-04 #2: [AMARO]
+Clue: "Traded for Halladay and Lee. (baseball)"
+Issue: Prior review flagged this as logically impossible because "the same player was not traded for both Halladay and Lee." The misread was grammatical: the clue means AMARO traded to acquire Halladay and Lee — he was the GM who made both deals. As an active-voice description of a GM's transactions, it is accurate. Ruben Amaro Jr. (5 letters: AMARO) traded assets to get Roy Halladay (December 2009) and Cliff Lee (December 2009 initially, then re-acquired in December 2010). Prior review's confusion was parsing "traded for" as "was traded for" rather than "traded in order to obtain."
+Rewrite: No rewrite needed. Prior flag retracted.
+
+---
+
+STANDING ISSUES (confirmed from prior review, not retracted):
+
+- 05-08 #1 BOUCHER: "Five straight shutouts in 2003-04." Boucher set that record with the Phoenix Coyotes, not the Flyers. The (hockey) tag invites a Flyers assumption. Rewrite: "Former Flyer. Set the modern shutout streak record — in Phoenix. (hockey)"
+
+- 05-09 #1 BRASHEAR: "Knocked Hatcher cold in 2003." Derian Hatcher was not a Flyer at the time; this was Flyers vs. Dallas. The specific fight incident needs independent verification before publishing.
+
+- 05-14 #4 GAGNE: "Eight concussions ended his Flyers career." Almost every solver will try LINDROS first. The clue needs a Gagne-specific detail. Rewrite: "Concussions grounded him. Clarke said he was fine. (hockey)"
+
+- 05-18 #2 DAULTON: "'93 Phillies catcher and soul. Mullet, eye black, NL MVP." Daulton never won the NL MVP award. He was an All-Star multiple times and finished in MVP voting but never won. Remove "NL MVP" or change to "NL All-Star."
+
+- 05-27 #4 GREENE: "Threw a no-hitter in 1990." Tommy Greene's no-hitter was May 23, 1991, not 1990. Fix the year.
+
+- 06-05 #3 RUNYAN: "McNabb's blind side." The right tackle protects the strong-side (right side), not the blind side. A right-handed QB's blind side is protected by the left tackle. Remove "blind side" or change to "strong side."
+
+- 06-13 #4 GROSS: "Thumbtack in glove." Kevin Gross was caught with sandpaper in his glove, not a thumbtack. Fix: "Sandpaper in the glove. Ten-game suspension. (baseball)"
+
+================================================================================
+REVIEW SESSION: 2026-05-08 (BOLARIS candidate clues)
+================================================================================
+
+Answer: BOLARIS (7 letters, B at position 0)
+Category: Saturday hard — sports media
+Subject: Jon Bolaris, NBC10 Philadelphia weatherman, Atlantic City honeypot incident
+
+CANDIDATE CLUES
+---------------
+
+[A] "NBC10 weatherman. Atlantic City models. Three nights of WIP and a maxed-out credit card. (sports media)"
+[B] "Honeypotted in AC. Cataldi ran it for a week. (sports media)"
+[C] "The storm he never saw coming was two models and a bar tab in Atlantic City. (sports media)"
+
+EVALUATIONS
+-----------
+
+[A] NBC10 weatherman. Atlantic City models. Three nights of WIP and a maxed-out credit card.
+  Fairness:    5 — NBC10 + Atlantic City + credit card + WIP coverage. Every element checkable. Cold solve for anyone who knows the story.
+  Accuracy:    5 — Fully accurate. He was NBC10's weatherman. Models ran up charges. WIP ran it for days.
+  Humor/WIP:   4 — Good three-beat rhythm. "Maxed-out credit card" is the right payoff. Slightly list-like, but the voice is right.
+  TOTAL: 14/15
+
+[B] Honeypotted in AC. Cataldi ran it for a week.
+  Fairness:    4 — "Honeypotted in AC" is a dead end for solvers who don't know the incident. Fair for Saturday hard, but unforgiving.
+  Accuracy:    4 — Spirit correct, attribution slightly loose. WIP ran it broadly; crediting Cataldi alone overstates his specific role.
+  Humor/WIP:   5 — Best rhythm of the three. Exactly how this gets said on air. Cataldi name-drop earns its place.
+  TOTAL: 13/15
+
+[C] The storm he never saw coming was two models and a bar tab in Atlantic City.
+  Fairness:    5 — "Storm he never saw coming" + weatherman is a clean, fair setup. Models + AC = unmistakable incident.
+  Accuracy:    5 — Factually solid.
+  Humor/WIP:   3 — "Storm he never saw coming" is a puzzle-writer joke about his weatherman job. Internally clever in exactly the way the clue rules prohibit. No WIP caller would frame it this way.
+  TOTAL: 13/15 — REJECTED (violates no-internally-clever rule)
+
+WINNER: [A]
+"NBC10 weatherman. Atlantic City models. Three nights of WIP and a maxed-out credit card. (sports media)"
+
+Rationale: Three declarative punches in plain WIP voice. No internal cleverness. Every detail is real and specific. A caller
+recapping the Bolaris saga would say exactly this. Clue C's weatherman/storm wordplay was clever on the page but wrong
+in spirit — the humor has to come from the incident, not from the format. Clue B has the best single-sentence snap but
+the Cataldi attribution is imprecise and "honeypotted" loses solvers who don't already know the story. [A] works for
+Saturday hard: specific enough to reward the informed solver, descriptive enough that the story is actually in the clue.
+

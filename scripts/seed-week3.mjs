@@ -13,10 +13,10 @@ const puzzles = [
   {
     puzzle_date: '2026-06-13', // Saturday — hard
     clues: [
-      // BYARS: B(0)Y(1)A(2)R(3)S(4) → B at 0
-      { clue_order: 1, acrostic_letter: 'B', answer: 'BYARS',   letter_index: 0, clue_text: "Cunningham's security blanket. Seventy-two catches, no one noticed. (football)" },
-      // AMARO: A(0)M(1)A(2)R(3)O(4) → A at 0
-      { clue_order: 2, acrostic_letter: 'A', answer: 'AMARO',   letter_index: 0, clue_text: 'Traded Lee twice. Callers never forgave. (baseball)' },
+      // BOLARIS: B(0)O(1)L(2)A(3)R(4)I(5)S(6) → B at 0
+      { clue_order: 1, acrostic_letter: 'B', answer: 'BOLARIS', letter_index: 0, clue_text: 'NBC10 weatherman. Atlantic City models. Three nights of WIP and a maxed-out credit card. (sports media)' },
+      // MAHORN: M(0)A(1)H(2)O(3)R(4)N(5) → A at 1
+      { clue_order: 2, acrostic_letter: 'A', answer: 'MAHORN',  letter_index: 1, clue_text: "Won a ring with Detroit's Bad Boys, then ended up on Broad Street with Barkley. (basketball)" },
       // MERLINO: M(0)E(1)R(2)L(3)I(4)N(5)O(6) → R at 2
       { clue_order: 3, acrostic_letter: 'R', answer: 'MERLINO', letter_index: 2, clue_text: 'Eskin called him live. Lindros tickets. (sports media)' },
       // GROSS: G(0)R(1)O(2)S(3)S(4) → G at 0

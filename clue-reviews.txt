@@ -1,0 +1,63 @@
+================================================================================
+REVIEW SESSION: 2026-05-08
+================================================================================
+
+**Clue:** "Eskin called him live. Lindros tickets. (sports media)" — 7 letters
+**Accuracy:** Verified and solid. In the summer of 1996, the Daily News reported that accused Philly mob boss Joey Merlino was spotted sitting in Eric Lindros's seats at a Flyers game. The story was that Lindros had turned his courtesy tickets over for resale and they ended up with Merlino. Howard Eskin physically went to Merlino's coffee shop, recruited him to call into WIP live, and the interview happened on air. Merlino denied any personal connection to Lindros and said he'd only met him three times. The incident is documented, the audio exists on YouTube, and Crossing Broad ran a piece on it in 2023 when Merlino told his version of events. Every word of this clue checks out factually.
+
+One precision note: the clue says Eskin "called him" — technically Eskin went to the coffee shop to recruit Merlino, and then Merlino called into the show. Whether Eskin placed the call or Merlino did the calling-in is a minor distinction, but "Eskin called him live" is defensible shorthand for Eskin making the contact happen and it going live on air. Not a problem.
+
+**Fairness:** Here's where it gets complicated, and I need to be straight with you.
+
+The answer appears to be MERLINO — 7 letters, fits clean. But the tag is (sports media). Joey Merlino is not a sports media figure. He is a mob boss. The incident is a WIP/sports media moment, but the answer is the subject of the Eskin call, not the media person. If the answer were ESKIN — also 5 letters, doesn't fit — or something else entirely, the (sports media) tag would make more sense.
+
+So either: (a) the tag is wrong and should be (hockey) or just general (sports), or (b) I'm misreading who the answer is and it's actually a sports media person connected to Lindros and tickets in a different incident I haven't found.
+
+If the answer IS Merlino: the clue is Fair to Hard. Real WIP heads know this story — Eskin going to the mob boss's coffee shop over Lindros tickets is the kind of thing that gets repeated on WIP retrospectives. But casual fans who weren't paying attention to Philly in 1996 will not get this without the letter count. With 7 letters confirming MERLINO, a knowledgeable fan solves it. Rating: Hard — but in a good, earned way if the tag is fixed.
+
+If the answer is someone else: I need the puzzle editor to clarify, because I cannot figure out a 7-letter sports media answer to this clue.
+
+**Humor/Craft:** The clue works. "Eskin called him live. Lindros tickets." — two punchy fragments, both factually loaded, zero filler. It reads like someone who was listening to the show that day. The structure is good: you get the mechanism (Eskin, live call) and the flashpoint (Lindros tickets), and if you were in Philly in 1996 your brain goes immediately to Merlino. The WIP voice is there. It doesn't wink, it doesn't explain itself, it trusts the listener to know the lore.
+
+The only craft issue is the tag. Calling this (sports media) when the answer is a mob boss feels off. The incident is sports media lore, but the answer isn't a sports media person. The tag should guide solvers toward the category of the answer, not the category of the context. If the puzzle uses (sports media) to mean "WIP incidents," that's a design decision worth documenting — but it will confuse players who expect the answer to be a broadcaster or analyst.
+
+**Overall:** The clue itself is well-written and factually clean — Pass on the writing, Revise the tag. Change (sports media) to (hockey) or create a (WIP lore) tag if the puzzle supports it. If the answer is not Merlino, the puzzle editor needs to clarify who the 7-letter answer is, because no 7-letter sports media figure connects to Eskin + Lindros + tickets.
+
+--------------------------------------------------------------------------------
+================================================================================
+REVIEW SESSION: 2026-05-08
+================================================================================
+
+Answer being evaluated: Philadelphia Eagles fullback/running back, late 1980s–early 1990s, 5 letters. This almost certainly points to KEITH BYARS (last name BYARS = 5 letters), 10th overall pick in the 1986 draft, who played for the Eagles through 1992. He was Randall Cunningham's primary outlet in the backfield, logging 72 receptions in 1988, 81 in 1990, and career totals of 610 catches. If the answer is not Byars, these evaluations may not hold — but everything below assumes it is.
+
+---
+
+**Clue A:** "Cunningham's security blanket. Caught everything. (football)" — 5 letters
+**Accuracy:** Clean. No factual claim is wrong here. Byars was Cunningham's go-to checkdown target throughout the late 80s and early 90s. "Caught everything" is a fair characterization — 72 receptions in 1988, 81 in 1990 — those are wide receiver numbers out of the backfield. This holds up.
+**Fairness:** The phrase "security blanket" is doing real work. It's a specific enough football term to suggest a pass-catching back, and pairing it with Cunningham narrows the era to Eagles late 80s/early 90s. With 5 letters confirmed, BYARS is the obvious answer for anyone who watched that offense. "Caught everything" is extra confirmation but maybe over-explains the same point as "security blanket" — both say the same thing. A knowledgeable fan gets this. Rating: Medium. Less initiated fans might struggle if they can't place who Cunningham's key backfield weapon was.
+**Humor/Craft:** "Security blanket" is good — it's a real football phrase and it has warmth to it, captures the relationship. "Caught everything" is a bit flat as a follow-up — it restates rather than adds. The clue would hit harder if the second fragment had more texture, something with a sharper edge. As written it's competent but not memorable. Joe Conklin in the background is not doing any sound effects for this one.
+**Overall:** Pass — but only barely. It's accurate and fair, but the two phrases are redundant. Would be stronger with a second detail that comes at him from a different angle.
+
+---
+
+**Clue B:** "Ran it, caught it, blocked it. (football)" — 5 letters
+**Accuracy:** Accurate as a general description. Byars was legitimately a three-way contributor — he rushed, caught passes at a high volume, and was a capable lead blocker. Nothing false here.
+**Fairness:** This is the problem. "Ran it, caught it, blocked it" describes basically every competent fullback in NFL history. There is no hook to Eagles football, no hook to Cunningham, no hook to a specific era, no hook to anything. Without the letter count doing all the heavy lifting, this clue could point at roughly 50 different players across 30 years. Even with 5 letters it's going to leave solvers guessing between Byars, Ricky Watters, Charlie Garner, and anyone else they can name. Rating: Brutal — not because it's hard to solve but because it shouldn't be a clue at all in this form.
+**Humor/Craft:** There's an attempt at a punchy tri-colon rhythm here — "ran it, caught it, blocked it" — and the bones are there, but the content is so generic it lands flat. It sounds like a television announcer describing a position group, not a WIP caller describing a specific guy. Chuck from Mt. Airy calls in with this and Angelo hangs up on him.
+**Overall:** Rewrite. The rhythm can be saved but the specifics need to do the work. Alternative: "Ran it, caught it, blocked it — while Cunningham scrambled for his life. (football)" — still not ideal but at least anchors it to the right era and offense.
+
+---
+
+**Clue C:** "Herschel trade freed him up. (football)" — 5 letters
+**Accuracy:** This needs careful handling. The Herschel Walker trade happened in October 1989 — Dallas traded Walker to Minnesota. Walker then signed with the Eagles in 1992. Byars left the Eagles after 1992 when his contract expired, essentially making room for Walker. So the timeline here runs BACKWARD from what the clue implies. "Herschel trade freed him up" suggests Walker's departure opened something for Byars — but Byars was already firmly established as the Eagles' key back throughout the late 80s. If anything, Walker's ARRIVAL in 1992 may have contributed to Byars eventually leaving, not "freed him up." The 1989 Walker trade was Dallas-to-Minnesota and had no direct roster effect on the Eagles. The premise of this clue appears to be factually inverted. Flag: Revise or Rewrite pending clarification of what the puzzle constructor had in mind.
+**Fairness:** Even setting the accuracy issue aside, this clue is hard to parse. "Freed him up" — freed him up to do what? Freed up carries? Freed up a roster spot? The connection between the Walker trade and any specific thing Byars did is not obvious even to a knowledgeable fan. I spent time researching this and could not identify a clean causal chain from the Herschel Walker trade to a specific development in Byars' career. Rating: Brutal — and for the wrong reasons, because the clue is confusing rather than challenging.
+**Humor/Craft:** "Herschel trade freed him up" is a cool premise in the abstract — a clue that points at your guy by referencing someone else's transaction is clever puzzle construction. But it only works if the factual chain is airtight. Here it isn't. The cleverness of the form is undermined by a premise that doesn't hold up.
+**Overall:** Rewrite. The idea of using the Herschel Walker transaction as a hook is worth salvaging, but the causal direction needs to be corrected. If Walker's arrival (1992) marks the beginning of the end for Byars, the clue might be: "When Herschel arrived, he was already out the door. (football)" — that's the real story. Or come at it from the other direction entirely.
+
+---
+
+**RECOMMENDATION:** Clue A is the best of the three. It's accurate, fair at a reasonable difficulty, and while it has a redundancy issue, it correctly captures the relationship between this player and Cunningham. Clue B is too generic to function. Clue C has a factual logic problem that needs to be resolved before it can be used.
+
+If you want a stronger alternative to Clue A, consider leaning into the specific statistical dominance: "Seventy-two catches out of the backfield. Cunningham's lifeline. (football)" — that's a factual anchor plus the relationship, and 72 receptions by a fullback in 1988 is the kind of number that sounds absurd and makes people want to solve it.
+
+--------------------------------------------------------------------------------

@@ -61,3 +61,349 @@ Answer being evaluated: Philadelphia Eagles fullback/running back, late 1980s–
 If you want a stronger alternative to Clue A, consider leaning into the specific statistical dominance: "Seventy-two catches out of the backfield. Cunningham's lifeline. (football)" — that's a factual anchor plus the relationship, and 72 receptions by a fullback in 1988 is the kind of number that sounds absurd and makes people want to solve it.
 
 --------------------------------------------------------------------------------
+================================================================================
+REVIEW SESSION: 2026-05-08 — FULL DB SWEEP (144 clues)
+================================================================================
+
+---
+**2026-05-06**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Cataldi's Dirty 30 booed the pick. (football)" — 6 letters | 5 | 5 | 5 | The gold standard. McNabb, 6 letters, every WIP listener knows this cold. Perfect clue. |
+| 2 | "Perfect game. Then playoff no-hitter. (baseball)" — 8 letters | 5 | 5 | 4 | Halladay, clean and earned. Could use one more ounce of WIP voice, but the facts do the work. |
+| 3 | "Refused to hit walls. Callers fumed. (baseball)" — 5 letters | 4 | 5 | 5 | Abreu. The wall-aversion is real, the caller fury was real. Classic city-at-its-worst-but-also-its-best energy. |
+| 4 | "Booed every touch on his return. (basketball)" — 8 letters | 4 | 5 | 4 | Bynum. "His return" implies an established player, which fits the Iguodala trade angle. Eight letters confirms it. |
+
+---
+**2026-05-07**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Traded Iguodala for him. Never played. (basketball)" — 5 letters | 5 | 5 | 5 | BYNUM. Perfect — the devastation is encoded in five words. Design note: confirm no duplicate answers if BYNUM also appears on 05-06. |
+| 2 | "Firefighter drafted 23rd. WIP baffled. (football)" — 7 letters | 5 | 5 | 5 | WATKINS. The firefighter is the hook everyone remembers; 23rd pick is accurate; 7 letters confirmed. Best kind of clue: the truth is already absurd. |
+| 3 | "Front office reunited with Jonesey. (hockey)" — 6 letters | 2 | 3 | 2 | "Jonesey" carries too much unexplained lore. If this refers to Keith Jones (former Flyer turned TV analyst), the specific front-office reunion moment isn't documented clearly enough for a solver. Needs a cleaner hook or a different reference. |
+| 4 | "Captain a decade. WIP never settled. (hockey)" — 6 letters | 3 | 3 | 2 | If this is GIROUX (6 letters, captain 2012-2022), "WIP never settled" is the lazy tell-don't-show pattern the guru flagged. Rewrite: "Captain ten years. Left for Ottawa when it mattered. (hockey)" — that's the actual argument. |
+
+---
+**2026-05-08**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Five straight shutouts in 2003-04. Modern NHL record. (hockey)" — 7 letters | 4 | 3 | 3 | Accuracy flag: Brian Boucher set this record with the PHOENIX COYOTES, not the Flyers. He was a former Flyer but the streak happened in Phoenix. The (hockey) tag will lead Philly fans to assume this is a Flyers moment — it is not. Rewrite: "Former Flyer. Five straight shutouts for Phoenix in 2003-04. Modern record." clarifies the team and adds the WIP irony that he had to leave Philly to make history. |
+| 2 | "1995 #7 pick on combine hype. Eskin's favorite bust. (football)" — 6 letters | 5 | 5 | 5 | MAMULA. All facts confirmed — 7th overall, combine warrior, Eskin champion turned executioner. "Eskin's favorite bust" is perfectly backhanded. Top tier. |
+| 3 | "Choked up so far his hands left the handle. (baseball)" — 9 letters | 3 | 4 | 4 | MORANDINI (9 letters) is the likely answer — known for extreme choking up. The image is vivid and specific. A baseball lifer gets it; a casual fan may not have this detail filed. Medium-hard fairness. |
+| 4 | "Penn engineer turned Phillies center fielder. (baseball)" — 9 letters | 4 | 5 | 3 | Doug GLANVILLE — confirmed. B.S. in Engineering from University of Pennsylvania. Phillies CF 1998-2002 and briefly 2004. The engineering background was a commonly cited detail during his playing days. Clean but a bit dry; no WIP flavor. |
+
+---
+**2026-05-09**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Flyers heavyweight. Knocked Hatcher cold in 2003. (hockey)" — 8 letters | 2 | 2 | 3 | Accuracy flag: Derian Hatcher was with the Dallas Stars in 2002-03, then signed with Detroit in July 2003. He was not a Flyer, so this fight was Flyers-vs-Dallas. I cannot verify any documented KO of Hatcher by a Flyers heavyweight in 2003. BRASHEAR is 8 letters and was Philly's enforcer in this era, but the specific incident is unconfirmed. Flag for fact-check before publishing. |
+| 2 | "'93 World Series third base. Gone. (baseball)" — 5 letters | 3 | 3 | 3 | Ambiguous: Dave Hollins (7 letters) was the '93 Phillies third baseman but doesn't fit 5. "Gone" suggests abrupt departure. If this is the Toronto side (Charlie Hayes, 5 letters, was on Toronto's '93 team), the Philly-puzzle framing is odd. Needs clarification on which side's third baseman. |
+| 3 | "Greatest player alive. One Flyers season. (hockey)" — 8 letters | 2 | 2 | 4 | Critical letter count problem. LINDROS is 7 letters, not 8. If the answer is Lindros, this is a letter count error. If it means to describe someone who played one season with the Flyers and was called the greatest player alive, that description matches Lindros precisely but the count doesn't add up. Flag as likely letter count error; verify answer. |
+| 4 | "Veteran corner infielder. Phillies signed and cut him, spring 2013. (baseball)" — 4 letters | 2 | 3 | 1 | INGE — Brandon Inge. The guru flagged this at the time and it stands: spring training cut is not puzzle material. No WIP moment. No story. Rewrite suggestion: replace this slot with a different 4-letter Phillies player who generated actual radio content. |
+
+---
+**2026-05-10**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Backup shortstop. Unassisted triple play. 2009. (baseball)" — 9 letters | 1 | 1 | 1 | Three factual errors. Mickey MORANDINI (9 letters) turned the unassisted triple play on September 20, 1992 (not 2009) as a SECOND BASEMAN (not shortstop). The prior agent corrected this clue in the database — if this old version is still live anywhere, it must be replaced immediately. |
+| 2 | "Sixers traded him to get Mutombo. (basketball)" — 7 letters | 4 | 5 | 3 | RATLIFF — Theo Ratliff, 7 letters, part of the package to Atlanta for Dikembe Mutombo in 2001. Accurate. Fair for Sixers fans from that era. No WIP pop — the trade's significance was about what arrived, not what left. |
+| 3 | "Middle reliever. 2008 World Series champion. (baseball)" — 6 letters | 2 | 4 | 1 | ROMERO — JC Romero, 6 letters. But "middle reliever" strips all the specificity — Romero was the primary setup man in that run and the PED suspension afterward was a genuine WIP moment. Rewrite: "Setup man in 2008. WIP had to forgive the PEDs. (baseball)" |
+| 4 | "Phillies outfielder, mid-90s. Brief cup of coffee, then Detroit. (baseball)" — 5 letters | 2 | 4 | 1 | MAGEE — Wendell Magee Jr., 5 letters. Prior agent corrected the first-round claim (he was 4th round). Still brutally obscure with no WIP hook whatsoever. |
+
+---
+**2026-05-11**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "2008 NLCS bases-loaded walk. Then the parade speech. (baseball)" — 7 letters | 5 | 5 | 5 | BURRELL. The NLCS walk was real, the parade speech was legendary. Two specific moments, chronological, emotionally loaded. Pat the Bat. |
+| 2 | "Admitted beaning Harper on purpose. WIP thought: relatable. (baseball)" — 6 letters | 5 | 5 | 5 | HAMELS. "WIP thought: relatable" is the perfect four-word encapsulation of this city's relationship with that moment. One of the five best clues in the set. Leave it alone. |
+| 3 | "Eskin swore he'd had Coronas before practice. (basketball)" — 7 letters | 5 | 5 | 5 | IVERSON. The best single clue in the entire set. Eleven words, zero waste. Hall of Fame clue. |
+| 4 | "Rookie corner, 'He Hate Me' hit. Cried on WIP postgame. (football)" — 6 letters | 4 | 4 | 5 | The XFL "He Hate Me" connection and the crying-on-WIP image are vivid. If the specific incident is documented and the player is confirmed, this is an excellent clue. Verify: which Eagles corner had the XFL connection and cried on WIP postgame? Confirm answer is 6 letters. |
+
+---
+**2026-05-12**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Muffed the Saints' Super Bowl onside kick. Hands team. (football)" — 7 letters | 5 | 5 | 5 | BASKETT. Super Bowl XLIV, confirmed. Prior agent fixed this correctly. "Hands team" is the perfect kicker. |
+| 2 | "Banner let him walk to Denver. WIP raged for years. (football)" — 7 letters | 5 | 5 | 5 | DAWKINS. The rage was sustained and documented. "Banner" as the named villain is key. Top tier. |
+| 3 | "Called Philly fans frontrunners in 2007. Then won MVP. (baseball)" — 7 letters | 5 | 5 | 5 | ROLLINS. The provocation, then the vindication, then the MVP. Perfect structure. |
+| 4 | "41-for-41 in saves. Knees in the Citizens Bank dirt. (baseball)" — 5 letters | 5 | 5 | 5 | LIDGE. One of the guru's top five. "Knees in the Citizens Bank dirt" is the image every Phillies fan carries. Leave it alone. |
+
+---
+**2026-05-13**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Kneeled at one-yard line, 2003 Cowboys. (football)" — 9 letters | 3 | 3 | 4 | Letter count problem: MCNABB is 6 letters, not 9. If the answer is McNabb, the letter count is wrong. WESTBROOK is 9 letters — but Westbrook didn't take the knee, McNabb did. The incident (McNabb kneeling rather than scoring to run out the clock) was a real WIP moment. Verify which player the clue intends and check letter count. |
+| 2 | "Torn Achilles, carried off 2011. (baseball)" — 6 letters | 4 | 4 | 3 | HOWARD — Ryan Howard, 6 letters. Tore his Achilles on the final out of the 2011 NLDS. Accurate. But the clue is emotionally flat — the moment was devastating and "carried off" doesn't capture it. Rewrite: "Achilles on the final out of the 2011 NLDS. WIP went quiet. (baseball)" |
+| 3 | "Three seasons, three second-round exits. (basketball)" — 6 letters | 3 | 3 | 2 | EMBIID is 6 letters and had multiple second-round exits, but the exact count and years need verification. "WIP frustration" without naming one specific moment is the tell-don't-show pattern again. Add a specific year or opponent. |
+| 4 | "Phillies closer. Bolted for Mets. (baseball)" — 6 letters | 4 | 4 | 4 | WAGNER — Billy Wagner, 6 letters. Left for the Mets in 2005. The betrayal angle lands. "Bolted for Mets" is exactly how WIP framed it. |
+
+---
+**2026-05-14**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Broad Street Bully. Two Cup rings. (hockey)" — 6 letters | 4 | 4 | 4 | BARBER — Bill Barber, 6 letters, 1974 and 1975 Cups. Multiple Flyers fit this description but 6 letters narrows it. Fair for the Spectrum faithful. |
+| 2 | "2009 PED accusation. Offered to face the blogger on WIP. (baseball)" — 6 letters | 5 | 5 | 5 | IBANEZ — Raul Ibanez, 6 letters. The blogger controversy in 2009 was real. "Offered to face the blogger on WIP" is exactly the kind of thing that sounds too Philly to be true and yet happened. |
+| 3 | "All-time hits leader. Wore Phillies red. (baseball)" — 4 letters | 5 | 5 | 4 | ROSE. "Wore Phillies red" is understated for the most controversial figure in baseball history, but accurate and fair. |
+| 4 | "Eight concussions ended his Flyers career. WIP debated every one. (hockey)" — 5 letters | 3 | 3 | 2 | GAGNE (Simon Gagne) — 5 letters. Almost everyone will guess LINDROS (7 letters — won't fit) before they get to Gagne. The guru confirmed this confusion and left it as-is per request. "WIP debated every one" is the lazy pattern. Rewrite: "Concussion after concussion. Clarke kept sending him back out there. (hockey)" — but verify whether that's factually accurate for Gagne vs. Lindros. |
+
+---
+**2026-05-15**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Reid's backup QB in 2000. (football)" — 5 letters | 2 | 2 | 1 | Accuracy flag: Jeff Blake was with the Eagles in 2004, not 2000. In 2000, McNabb's backup was Koy Detmer. BLAKE is 5 letters — DETMER is 6. If the answer is BLAKE, fix the year to 2004. If the answer is a different 5-letter QB from 2000, clarify. |
+| 2 | "Seven touchdowns on 25 Eagles catches. (football)" — 8 letters | 3 | 3 | 2 | Stat-only format with no year, era, or WIP context. "Seven TDs on 25 catches" describes a very efficient receiver in a limited role but doesn't narrow to one player without the letter count doing all the work. Needs a quarterback reference or a year. |
+| 3 | "His People showed up every fifth night. (baseball)" — 6 letters | 3 | 3 | 4 | Tag conflict: PERSON is Wesley Person (basketball), "Person's People" is a WIP basketball show. But "every fifth night" implies a starting pitcher (pitchers work every fifth day). The baseball tag and the pitcher implication contradict the Person's People basketball reference. Fix the sport tag to (basketball) or rewrite the clue so the pitch-day double meaning doesn't mislead. |
+| 4 | "1967 champion Sixers guard, Hall of Famer. (basketball)" — 5 letters | 4 | 5 | 2 | GREER — Hal Greer, 5 letters. On the 1967 championship Sixers, Hall of Famer. Accurate. Fair for a serious Sixers historian. Pure trivia, no WIP flavor. |
+
+---
+**2026-05-16**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Eagles Pro Bowl receiver, 1992. Cunningham's deep threat. (football)" — 7 letters | 4 | 5 | 3 | BARNETT — Fred Barnett, confirmed. 7 letters. Made the Pro Bowl in 1992. Accurate and fair for Eagles lifers. Workmanlike but no WIP pop. |
+| 2 | "A Flotilla of fans in sombreros packed the Vet. (baseball)" — 7 letters | 5 | 5 | 5 | PADILLA — Vicente Padilla, confirmed. "Padilla's Flotilla" was real. Fans in sombreros in the Vet. Peak Philly fan specificity. |
+| 3 | "Setup man for the 2008 title team. (baseball)" — 6 letters | 3 | 4 | 2 | ROMERO — JC Romero, same problem as 05-10 clue 3. The PED suspension after the ring is the WIP story — use it. Rewrite: "Setup man for 2008. WIP had to forgive the PEDs. (baseball)" |
+| 4 | "Pro Bowl DT in the Reid era. (football)" — 6 letters | 1 | 3 | 1 | Too vague. The Reid era was 1999-2012 with multiple Pro Bowl DTs. Without a name, year, or specific moment, this clue is unanswerable. Needs a substantial rewrite. |
+
+---
+**2026-05-17**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Error then walk-off double. Same game. (baseball)" — 7 letters | 5 | 5 | 5 | BATISTE — Kim Batiste, 1993 NLCS Game 1. Error in the 9th, walk-off double in the 10th. Confirmed. "Same game" is the perfect kicker — the redemption arc in 120 minutes. |
+| 2 | "2004 salary dump from Toronto. One Sixers season, then flipped. (basketball)" — 7 letters | 3 | 4 | 2 | VANHORN — Keith Van Horn, confirmed. Accurate but the story has no WIP hook — pure salary-dump logistics. Functional for a harder puzzle day. |
+| 3 | "Phillies center fielder. The hair, the dives, the lefty bat. (baseball)" — 5 letters | 2 | 2 | 3 | MARSH — Tom Marsh. The prior review flagged this: Marsh had only 20 MLB games. "The hair, the dives, the lefty bat" implies a recognizable regular, not a 20-game career. Either the answer is a different 5-letter Phillies CF, or the descriptors don't match. Needs clarification from constructor. |
+| 4 | "Said nobody remembers who went second. (hockey)" — 6 letters | 4 | 5 | 4 | DAIGLE — Alexandre Daigle, 6 letters. The 1993 quote and its spectacular aging (Pronger went second) makes this land. The prior agent's clean version without "Quote aged poorly" is stronger. |
+
+---
+**2026-05-18**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "2023 MVP. Trust the Process made flesh. (basketball)" — 6 letters | 5 | 5 | 5 | EMBIID. "Trust the Process made flesh" is inspired — connects the organizational philosophy to its single greatest product. |
+| 2 | "'93 Phillies catcher and soul. Mullet, eye black, NL MVP. (baseball)" — 7 letters | 5 | 5 | 5 | DAULTON. "Soul" is the right word. The mullet and eye black place you in the Vet. One of the best clues in the set. |
+| 3 | "Best interview in Philly sports. '93 Phillies first baseman. (baseball)" — 4 letters | 5 | 5 | 5 | KRUK. "Best interview in Philly sports" is an arguable claim and that's what makes it a WIP claim. |
+| 4 | "Ertz's heir at tight end. WIP forgot Ertz overnight. (football)" — 7 letters | 5 | 5 | 5 | GOEDERT. "WIP forgot Ertz overnight" is both accurate and a perfectly brutal self-indictment of the city's attention span. |
+
+---
+**2026-05-19**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "7-foot-6 Sixers center, 1993-97. Everyone in the league dunked on him. (basketball)" — 7 letters | 3 | 3 | 4 | BRADLEY — Shawn Bradley. Accuracy flag: Bradley was traded to New Jersey in November 1995, not 1997. "1993-95" is accurate; "1993-97" overstates his Philly tenure by two years. Fix the years. "Everyone in the league dunked on him" is literally and figuratively true. |
+| 2 | "WIP's current Sixers obsession. All-Star guard, beloved interview. (basketball)" — 5 letters | 4 | 4 | 3 | MAXEY — Tyrese Maxey, 5 letters, fits the May 2026 context. "Beloved interview" tracks. "Current obsession" will date the clue — consider a specific Maxey moment instead. |
+| 3 | "Caught the TD that briefly wasn't. Super Bowl LII. (football)" — 4 letters | 5 | 5 | 5 | ERTZ. Prior agent fixed the Philly Special error. "Briefly wasn't" is a beautiful compression of the play review sequence. Perfect clue. |
+| 4 | "Heisman winner's final NFL season. (football)" — 6 letters | 3 | 3 | 3 | GEORGE — Eddie George, 2004 Eagles. The guru flagged this: forgettable stint, not a WIP moment. Fair but emotionally inert. |
+
+---
+**2026-05-20**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Pitcher who homered in the World Series. (baseball)" — 7 letters | 2 | 3 | 2 | Without a year, team, or era marker, multiple pitchers have done this. The Phillies context is not established. Seven letters — unverifiable without more research. Needs a year or opponent. |
+| 2 | "Released by Eagles in 2014 over alleged gang ties. (football)" — 7 letters | 4 | 4 | 4 | The story (alleged gang ties, release) is real WIP fodder. Verify the specific player and year, as the guru and prior agent flagged this as unconfirmed. If the details check out, the clue earns its place. |
+| 3 | "Flyers winger shipped in the Lindros megadeal. (hockey)" — 6 letters | 4 | 4 | 3 | The 1992 Lindros trade involved Peter Forsberg, Ron Hextall, Kerry Huffman, Steve Duchesne, Mike Ricci, Chris Simon, and picks. No 6-letter winger is immediately obvious from this list (HEXTALL = 7, FORSBERG = 8, DUCHESNE = 8, HUFFMAN = 7, RICCI = 5, SIMON = 5). Prior agent listed this as confirmed — constructor should verify which 6-letter player is intended. |
+| 4 | "Produced the Immaculata championship film. (media)" — 7 letters | 1 | 3 | 1 | GARGANO — guru called this too obscure even for WIP obsessives. This slot should be reconsidered entirely. |
+
+---
+**2026-05-21**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Sixers max contract bust. Eskin questioned every dollar. (basketball)" — 5 letters | 4 | 4 | 4 | BRAND — Elton Brand, 5 letters, signed a max deal in 2008, immediately hampered by injury. "Eskin questioned every dollar" is confirmed WIP behavior. |
+| 2 | "Flyers winger. The hair, the goal celebration, the 2010 run. (hockey)" — 8 letters | 4 | 5 | 5 | HARTNELL — Scott Hartnell, 8 letters. The shaggy hair, the fist-pump celebrations, the 2010 playoff run. Vivid and specific. |
+| 3 | "Flyers captain. Traded to LA with Carter, won two Cups. (hockey)" — 8 letters | 5 | 5 | 4 | RICHARDS — Mike Richards, 8 letters. Traded to LA Kings with Jeff Carter in 2011, won Cups in 2012 and 2014. "Won two Cups" is the mild knife twist. |
+| 4 | "Eagles defensive end Hugh. Cataldi's longtime morning regular. (football)" — 7 letters | 5 | 5 | 4 | DOUGLAS — Hugh Douglas. "Cataldi's longtime morning regular" is the WIP hook. |
+
+---
+**2026-05-22**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Phillies All-Star catcher in 1999. Replaced Daulton behind the plate. (baseball)" — 10 letters | 4 | 5 | 3 | LIEBERTHAL — Mike Lieberthal, 10 letters. Made the All-Star team in 1999. Accurate. Professional and uncontroversial — hence no WIP flavor. Works as a puzzle clue. |
+| 2 | "Eagles back Duce. Vet Stadium turf grinder, 1997-2003. (football)" — 6 letters | 5 | 5 | 4 | STALEY — Duce Staley. "Turf grinder" is the right image for the right surface. |
+| 3 | "Gold Glove third baseman. Feuded with Bowa, fled to St. Louis. (baseball)" — 5 letters | 5 | 5 | 5 | ROLEN — Scott Rolen. Gold Gloves, the Bowa feud, the trade to St. Louis. One of the great Phillies betrayal stories. |
+| 4 | "Sixers wing Sam. Early Process-era forgotten depth. (basketball)" — 5 letters | 3 | 4 | 2 | YOUNG — Sam Young, 5 letters. Accurate but "forgotten depth" is the subject's obscurity, not a story. Hard to make this sing. |
+
+---
+**2026-05-23**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Statue at the Art Museum steps. (boxing)" — 6 letters | 5 | 5 | 4 | ROCKY. The (boxing) tag is perfect anchor. Works for everyone. |
+| 2 | "Freakishly fast. Eagles 2004 mega-signing. (football)" — 6 letters | 4 | 5 | 3 | OWENS — T.O., 6 letters. The 2004 signing was seismic. "Freakishly fast" undersells the chaos. Could be stronger but works as a puzzle clue. |
+| 3 | "May 2000: fifth-overtime goal vs Pittsburgh, 2:35 a.m. (hockey)" — 7 letters | 5 | 5 | 5 | PRIMEAU — Keith Primeau. Confirmed: May 4-5, 2000, fifth OT, 2:35 a.m. The specific time is what separates a great clue from a good one — it puts you in the moment. |
+| 4 | "Hall of Famer's lone Eagles season. (football)" — 4 letters | 3 | 3 | 2 | GORE — Frank Gore per prior agent. Accuracy flag: as of the knowledge cutoff, Frank Gore has not been inducted into the Pro Football Hall of Fame, so "Hall of Famer" is premature unless he was recently inducted. Verify HOF status before publishing. |
+
+---
+**2026-05-24**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Sixers center who wore the Haitian flag on his chest. (basketball)" — 9 letters | 3 | 5 | 3 | DALEMBERT — Samuel Dalembert, 9 letters. The Haitian heritage detail is real and documented. Guru missed this. It's a fair clue for early-2000s Sixers followers; letter count carries weight for others. |
+| 2 | "Czech winger Jakub. Giroux's right side for a decade. (hockey)" — 7 letters | 4 | 5 | 3 | VORACEK — Jakub Voracek, 7 letters. Czech winger, played alongside Giroux for years. Workmanlike but not exciting. |
+| 3 | "Flyers defenseman Ivan. Skipped the 2023 Pride warmup. (hockey)" — 8 letters | 4 | 5 | 4 | PROVOROV — Ivan Provorov, 8 letters. January 2023 incident, national news, divided the Philly hockey community. Accurate and fair for anyone who followed the 2022-23 Flyers. |
+| 4 | "Phillies first baseman Rico. Post-Kruk replacement, mid-90s. (baseball)" — 6 letters | 4 | 5 | 3 | BROGNA — Rico Brogna, 6 letters. Accurate. Professional, no radio drama. Works as puzzle filler. |
+
+---
+**2026-05-25**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "'I am not a role model.' 1993 MVP, traded that summer. (basketball)" — 7 letters | 5 | 5 | 5 | BARKLEY. The Nike slogan, the MVP, the trade to Phoenix. The quote is burned into the culture. |
+| 2 | "Came from Brooklyn. Cataldi smelled title. (basketball)" — 6 letters | 4 | 5 | 4 | HARDEN — James Harden, 6 letters. February 2022 trade from Brooklyn. "Cataldi smelled title" — and was wrong — is pitch-perfect WIP. |
+| 3 | "WIP hockey voice since the Spectrum. (radio)" — 8 letters | 4 | 5 | 3 | Eight letters for a WIP hockey broadcaster with Spectrum-era roots. Prior review confirmed this. Fair for Flyers radio die-hards. |
+| 4 | "Phillies manager hired post-Kapler. Fired June 2022. (baseball)" — 7 letters | 5 | 5 | 3 | GIRARDI — Joe Girardi, 7 letters. Hired after Kapler left for SF in 2019, fired mid-season 2022. The "fired June 2022" detail is precise and locating — good craft. Could add one line of WIP feeding frenzy energy, but works as written. |
+
+---
+**2026-05-26**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "One-season Sixers wing Jimmy. 2018 playoff run, then Minnesota. (basketball)" — 6 letters | 5 | 5 | 5 | BUTLER. One season, the playoff run was electric, the Minnesota trade was heartbreak. Perfect compression. |
+| 2 | "JT, best catcher alive. Harper's battery mate. (baseball)" — 8 letters | 5 | 5 | 4 | REALMUTO — J.T. Realmuto, 8 letters. "Best catcher alive" is how WIP talks about him. Solid. |
+| 3 | "Opening Day boos turned to curtain calls. (baseball)" — 6 letters | 4 | 5 | 5 | TURNER — Trea Turner, 6 letters. The Opening Day 2023 arc is a quintessential Philly story. |
+| 4 | "Veteran wing Danny. ACL tear in 2022 first-round Game 6. (basketball)" — 5 letters | 4 | 5 | 4 | GREEN — Danny Green, 5 letters. Tore his ACL in Game 6 of the 2022 first round. A memorable moment in a painful series. |
+
+---
+**2026-05-27**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Phillies OF. Came over after PED suspension. (baseball)" — 4 letters | 4 | 5 | 3 | BYRD — Marlon Byrd, 4 letters. 50-game PED suspension with the Cubs, came to the Phillies in 2014. Accurate. The prior agent's version added "Marlon" for clarity. |
+| 2 | "'93 Series leadoff man. Federal prison later. (baseball)" — 7 letters | 5 | 5 | 5 | DYKSTRA. "Federal prison later" is the understated gut punch. The gap between '93 hero and convicted felon is the entire WIP joke. |
+| 3 | "2006 Eagles fill-in QB. Went 5-1 after McNabb tore his ACL. (football)" — 6 letters | 5 | 5 | 4 | GARCIA — Jeff Garcia, 6 letters. Confirmed accurate. Went 5-1 finishing that season. "Fill-in" is slightly modest for what he did. |
+| 4 | "Threw a no-hitter in 1990. Anchor of the '93 pennant rotation. (baseball)" — 6 letters | 4 | 3 | 4 | Accuracy flag: if the answer is GREENE (Tommy Greene, 6 letters), his no-hitter was May 23, 1991 — not 1990. Terry Mulholland threw a no-hitter on August 15, 1990 (MULHOLLAND = 11 letters, doesn't fit). If the year "1990" is in the clue and the answer is Greene, the year is wrong by one. Verify: fix to "no-hitter in 1991" if the answer is Tommy Greene. |
+
+---
+**2026-05-28**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Phillies left fielder. Torched every corner outfielder alive. (baseball)" — 5 letters | 4 | 4 | 4 | Prior agent's database entry reads "A.J. Phillies left fielder." A.J. with 5 letters — needs constructor confirmation of the specific player. "Torched every corner outfielder alive" implies an elite defensive player or hitter. |
+| 2 | "NBC Sports Philly rinkside bottle rocket. (media)" — 8 letters | 3 | 4 | 5 | SKALICKY — guru called "bottle rocket" great flavor but not a knowledge peg. Left as-is per prior instruction. Fair only for committed NBC Sports Philly viewers. |
+| 3 | "Super Bowl LVII: four passing TDs, lost to Mahomes. (football)" — 5 letters | 5 | 5 | 3 | HURTS — Jalen Hurts, 5 letters. Super Bowl LVII against the Chiefs. Four passing TDs confirmed. Accurate and fair. The clue is factual but the heartbreak of that game deserves more. |
+| 4 | "Manager of the '93 NL pennant Phillies. WIP's guy. (baseball)" — 7 letters | 5 | 5 | 5 | FREGOSI. "WIP's guy" is exactly right. Fregosi had the working-class radio presence that played perfectly on 610. |
+
+---
+**2026-05-29**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Buddy Ryan's do-it-all H-back. (football)" — 5 letters | 4 | 5 | 3 | BYARS — Keith Byars, confirmed from prior extensive review. The H-back designation is accurate. |
+| 2 | "Process big man Jahlil. Boston nightclub fight derailed his career. (basketball)" — 6 letters | 5 | 5 | 4 | OKAFOR — Jahlil Okafor, 6 letters. The Boston nightclub fight was real and a defining Process-era narrative. |
+| 3 | "His parents called out Clarke over the concussions. WIP took sides. (hockey)" — 7 letters | 5 | 5 | 5 | LINDROS — Eric Lindros. Prior agent confirmed and fixed the geography error. "His parents called out Clarke" is the specific, real hook. One of the best clues in the set. |
+| 4 | "Hall of Fame winger. One Flyers season at age 39. (hockey)" — 4 letters | 3 | 3 | 2 | HULL — Brett Hull per prior agent. If Hull joined the Flyers in 2003-04, he was born August 1964, making him 38-39. "Age 39" is close but should be verified. If Hull is not yet in the Hall of Fame as of publish date, or the age is off, either detail needs correcting. |
+
+---
+**2026-05-30**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Manager who feuded with Rolen daily. (baseball)" — 4 letters | 5 | 5 | 5 | BOWA. "Daily" does all the work. Perfect. |
+| 2 | "Eagles receiver James. McNabb's favorite chain-mover. (football)" — 6 letters | 5 | 5 | 4 | THRASH — James Thrash, 6 letters. "Chain-mover" is the right designation. |
+| 3 | "Legion of Doom left wing. 50-goal season in 1995-96. (hockey)" — 7 letters | 5 | 5 | 4 | LECLAIR — John LeClair, 7 letters. The 50-goal season is real and iconic. Fair for any 90s Flyers fan. |
+| 4 | "'93 Phillies bench bat. Pinch-hit homers and a thick mustache. (baseball)" — 10 letters | 4 | 4 | 4 | INCAVIGLIA — Pete Incaviglia, 10 letters. Power off the bench in '93, the mustache fits Macho Row. "Thick mustache" is very Vet-era. Fair for '93 Phillies deep-cut fans. |
+
+---
+**2026-05-31**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Carried Flyers to 2008 conference finals. (hockey)" — 5 letters | 4 | 5 | 3 | BIRON — Martin Biron, 5 letters. His goaltending in the 2008 run (comeback from 3-1 down vs. Brodeur) was real. Accurate. No WIP pop — pure factual. |
+| 2 | "1997 Cup Finals top-pair defenseman. Flyers captain after Lindros. (hockey)" — 10 letters | 4 | 5 | 3 | DESJARDINS — Eric Desjardins, 10 letters. Flyers captain 2000-2006 after Lindros. On the 1997 Finals team. Prior agent confirmed. |
+| 3 | "Blitz-loving Eagles coach, 1986-90. (football)" — 4 letters | 5 | 5 | 5 | RYAN — Buddy Ryan. Four letters, the blitz, 1986-1990. One of the most beloved figures in Eagles history. The simplicity is the point. |
+| 4 | "Defenseman on the 1997 Finals run. Big body, soft hands. (hockey)" — 8 letters | 3 | 4 | 2 | Multiple Flyers defensemen fit "big body" on the 1997 team. Without a distinguishing detail, hard to narrow even with 8 letters. Add a signature moment or a stat. |
+
+---
+**2026-06-01**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Sixers' 2005 dump. Knees were gone. (basketball)" — 6 letters | 3 | 4 | 3 | WEBBER — Chris Webber, 6 letters. Signed in 2005 and quickly released, knees shot. "Knees were gone" is the accurate and sad summary. |
+| 2 | "Phillies homegrown ace. NLCS Game 6 clincher in 2022. (baseball)" — 4 letters | 5 | 5 | 5 | NOLA — Aaron Nola, 4 letters. Homegrown, the 2022 NLCS clincher. Perfect clue. |
+| 3 | "'Harper to Philly' broke WIP for days. (baseball)" — 6 letters | 5 | 5 | 5 | HARPER — Bryce Harper, 6 letters. The 2019 signing. "Broke WIP for days" is accurate and right-sized. |
+| 4 | "Eagles QB stopgap, 1997-98. (football)" — 6 letters | 2 | 3 | 1 | HOYING — Bobby Hoying, 6 letters. Prior agent rewrote this to "1998 Eagles starting QB disaster. WIP's daily punching bag." — that is substantially better. Use the rewrite. |
+
+---
+**2026-06-02**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Chip Kelly cut him loose despite stardom. (football)" — 6 letters | 4 | 5 | 4 | MCCOY — LeSean McCoy, 6 letters. The Chip Kelly trade was one of the most-debated moves of the Kelly era. "Despite stardom" is the right framing. |
+| 2 | "Eagles corner. Three Pro Bowls in Philly. (football)" — 5 letters | 3 | 3 | 2 | ALLEN — Eric Allen, 5 letters. Accurate but dry. WIP barely noticed Eric Allen because the 90s defense was overshadowed by Cunningham's offense drama. Needs more texture or a specific season. |
+| 3 | "Halladay's perfect-game catcher, 2010. (baseball)" — 4 letters | 5 | 5 | 4 | RUIZ — Carlos Ruiz, 4 letters. Caught Halladay's perfect game on May 29, 2010. Clean and specific. |
+| 4 | "Flyers big contract. Immediate disappointment. (hockey)" — 7 letters | 2 | 3 | 1 | GRATTON — Chris Gratton. "Flyers big contract. Immediate disappointment." describes half a dozen Flyers signings. Rewrite: "Eight million a year in 1997. Gone by Thanksgiving. (hockey)" — that's the Gratton story. |
+
+---
+**2026-06-03**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "1987 NL Cy Young as Phillies closer. Forkball, mustache, swagger. (baseball)" — 9 letters | 5 | 5 | 5 | BEDROSIAN — confirmed accurate. The three-noun list is economical and vivid. Top tier. |
+| 2 | "WIP called him automatic. (football)" — 5 letters | 4 | 5 | 3 | AKERS — David Akers. "Automatic" is the right WIP-ism. |
+| 3 | "Thirteen Eagles seasons. No ring. (football)" — 4 letters | 3 | 3 | 2 | Flag: 4-letter Eagle with 13 seasons but no Super Bowl ring. This needs clarification from the constructor. Multiple candidates depending on how seasons are counted. |
+| 4 | "Iverson's 2004 backcourt mate. Gone before the All-Star break. (basketball)" — 6 letters | 3 | 4 | 2 | Prior agent confirmed as HUGHES. If this is Larry Hughes or another player, the "Gone before the All-Star break" hook is the narrative — verify accuracy and add the player's first name for fairness. |
+
+---
+**2026-06-04**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Caught the 1980 Phillies to a title. (baseball)" — 5 letters | 5 | 5 | 4 | BOONE — Bob Boone, 5 letters. Catcher on the 1980 championship Phillies. Clean. |
+| 2 | "Traded for Halladay and Lee. (baseball)" — 5 letters | 3 | 3 | 2 | The same player was not traded for both Halladay and Lee — they were separate deals. If the answer is BROWN (Domonic Brown, 5 letters, who was in the Lee trade from Seattle), the clue implies he was traded for both. Clarify or split the reference. |
+| 3 | "Sixers max deal. WIP questioned every year. (basketball)" — 6 letters | 3 | 3 | 2 | HARRIS — Tobias Harris, 6 letters. This overlaps thematically with 05-21 clue 1 (BRAND). Use a Tobias Harris-specific detail: "Owed $180 million. WIP did the math every morning. (basketball)" |
+| 4 | "Caught doctoring the ball with sandpaper. (baseball)" — 5 letters | 5 | 5 | 4 | GROSS — Kevin Gross, 5 letters. Suspended August 1987 for sandpaper in his glove. Note: if GROSS is also the answer to 06-13 clue 4 (thumbtack), that is a duplicate answer AND the thumbtack/sandpaper discrepancy is an accuracy error. Flag: potential duplicate between this clue and 06-13 clue 4. |
+
+---
+**2026-06-05**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Phillies backup catcher. Lieberthal's insurance. (baseball)" — 7 letters | 2 | 3 | 1 | BENNETT — Todd Bennett? Backup catcher depth with no specific WIP story is hard puzzle material. Guru missed this entirely. Unless there is a specific incident, this slot needs a different player or a much stronger clue. |
+| 2 | "Flyers traded alongside Richards to LA. (hockey)" — 6 letters | 4 | 5 | 3 | CARTER — Jeff Carter, 6 letters. Traded to LA with Richards in 2011. "Alongside Richards" is helpful. Both won Cups in LA — worth adding for the full knife twist. |
+| 3 | "Eagles right tackle. McNabb's blind side. (football)" — 6 letters | 4 | 4 | 3 | RUNYAN — Jon Runyan, 6 letters. Accuracy flag: the blind side for a right-handed quarterback is the LEFT (outside the line of sight), protected by the left tackle. The right tackle protects the strong side, not the blind side. Remove "blind side" or change to "right side." |
+| 4 | "Sixers GM. Burner Twitter account ended him. (basketball)" — 9 letters | 5 | 5 | 5 | COLANGELO — Bryan Colangelo. The burner Twitter scandal is one of the most bizarre executive stories in NBA history and it happened here. "Ended him" is exactly right. |
+
+---
+**2026-06-06**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Sixers bench guard Jon. Rick's son, brief late-'90s stint. (basketball)" — 5 letters | 4 | 5 | 3 | BARRY — Jon Barry, 5 letters. Prior agent confirmed it's Jon, not Brent or Drew. The "Rick's son" hook elevates it from pure trivia. |
+| 2 | "Third-down target in the Reid years. (football)" — 5 letters | 1 | 3 | 1 | Too vague — 14 years of Reid produced multiple 5-letter third-down targets. No year, no play, no moment. This slot needs a complete rewrite. |
+| 3 | "Eagles LB. Gang Green defense anchor. (football)" — 6 letters | 3 | 4 | 2 | JOYNER — Seth Joyner, 6 letters. "Gang Green defense" is the Buddy Ryan era locator. Joyner deserves more — he was excellent and underappreciated. The clue is dry for a guy who was legitimately great. |
+| 4 | "McNabb's 2007 backup. Reid's emergency call. (football)" — 10 letters | 3 | 3 | 2 | HARRINGTON — Joey Harrington. Prior review flagged the year as potentially off. Verify Harrington's Eagles year before publishing. The "emergency call" framing is good if the year is corrected. |
+
+---
+**2026-06-07**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Sixers backup C, 2007 Iverson-trade roster. (basketball)" — 6 letters | 2 | 4 | 1 | BATTIE — Tony Battie, 6 letters. Brutally obscure — the guru missed it. Prior agent added "Tony." Still a hard solve for anyone who wasn't tracking the post-Iverson Sixers depth chart. |
+| 2 | "Sixers wing from Iverson-trade fallout. (basketball)" — 6 letters | 2 | 4 | 1 | THOMAS — Tim Thomas per prior agent. Also very obscure. Both this and clue 1 are in the range of impossible for casual fans. |
+| 3 | "Bolted to Nationals. WIP cried betrayal. (baseball)" — 5 letters | 5 | 5 | 5 | WERTH — Jayson Werth, 5 letters. "WIP cried betrayal" is exactly right — the city took it personally. |
+| 4 | "Wide zone, 1997 NLCS Game 5. (baseball)" — 5 letters | 4 | 5 | 4 | GREGG — Eric Gregg, 5 letters. The 1997 NLCS strike zone controversy. The guru called this "quietly brilliant" and it is. |
+
+---
+**2026-06-13**
+
+| # | Clue | Fairness (1-5) | Accuracy (1-5) | Humor/WIP (1-5) | Notes |
+|---|------|---------------|----------------|-----------------|-------|
+| 1 | "Cunningham's security blanket. Seventy-two catches, no one noticed. (football)" — 5 letters | 4 | 5 | 4 | BYARS — Keith Byars. Prior review confirmed 72 catches in 1988. "No one noticed" is the right tone — fullback catching passes in 1988 was invisible nationally. |
+| 2 | "Traded Lee twice. Callers never forgave. (baseball)" — 5 letters | 5 | 5 | 5 | AMARO — Ruben Amaro Jr., 5 letters. Trading Cliff Lee twice (2009 to Seattle, then again in the Halladay package) made him the most second-guessed GM in WIP history. Perfect WIP target. |
+| 3 | "Eskin called him live. Lindros tickets. (sports media)" — 7 letters | 4 | 5 | 5 | MERLINO — Joey Merlino, 7 letters. See prior review (first entry in this file) for full analysis. The incident is real and well-documented. Change the (sports media) tag to (hockey) or create a (WIP lore) category — the answer is a mob boss, not a sports media figure. |
+| 4 | "Thumbtack in glove. Ten-game suspension. (baseball)" — 5 letters | 4 | 3 | 4 | Accuracy flag: Kevin Gross was suspended for SANDPAPER, not a thumbtack. If this is a different incident or a different player, clarify. Also flag: if GROSS is the answer to both this clue and 06-04 clue 4 (sandpaper), that is a duplicate answer in the same puzzle database. Resolve both the accuracy error and the potential duplicate. |
+
+--------------------------------------------------------------------------------
+

@@ -24,6 +24,7 @@ type IPEntry = {
   ip: string
   city: string | null
   country: string | null
+  plays: number
 }
 
 type DayStat = {
@@ -58,18 +59,21 @@ async function fetchStats(): Promise<DayStat[]> {
 
     if (error || !data) return []
 
-    const ipsByDate = new Map<string, Map<string, { city: string | null; country: string | null }>>()
+    const ipsByDate = new Map<string, Map<string, { city: string | null; country: string | null; plays: number }>>()
     const playsByDate = new Map<string, number>()
     for (const row of data) {
       const d = row.puzzle_date as string
       const ip = row.ip_address as string
       if (!ipsByDate.has(d)) ipsByDate.set(d, new Map())
-      if (!ipsByDate.get(d)!.has(ip)) {
-        ipsByDate.get(d)!.set(ip, {
+      const ipMap = ipsByDate.get(d)!
+      if (!ipMap.has(ip)) {
+        ipMap.set(ip, {
           city: (row.city as string | null) ?? null,
           country: (row.country as string | null) ?? null,
+          plays: 0,
         })
       }
+      ipMap.get(ip)!.plays++
       playsByDate.set(d, (playsByDate.get(d) ?? 0) + 1)
     }
 
@@ -79,8 +83,8 @@ async function fetchStats(): Promise<DayStat[]> {
         total_plays: playsByDate.get(date) ?? 0,
         unique_ips: ipMap.size,
         ips: [...ipMap.entries()]
-          .map(([ip, loc]) => ({ ip, city: loc.city, country: loc.country }))
-          .sort((a, b) => a.ip.localeCompare(b.ip)),
+          .map(([ip, loc]) => ({ ip, city: loc.city, country: loc.country, plays: loc.plays }))
+          .sort((a, b) => b.plays - a.plays),
       }))
       .sort((a, b) => b.puzzle_date.localeCompare(a.puzzle_date))
   } catch {
@@ -160,13 +164,16 @@ function StatTable({ stats }: { stats: DayStat[] }) {
                     show {row.unique_ips} IP{row.unique_ips !== 1 ? 's' : ''}
                   </summary>
                   <div className="mt-2 space-y-0.5">
-                    {row.ips.map(({ ip, city, country }) => (
-                      <div key={ip} className="font-mono text-xs text-zinc-300 flex gap-2">
+                    {row.ips.map(({ ip, city, country, plays }) => (
+                      <div key={ip} className="font-mono text-xs text-zinc-300 flex gap-2 items-baseline">
                         <span>{ip}</span>
                         {(city || country) && (
                           <span className="text-zinc-500 font-sans">
                             {[city, country].filter(Boolean).join(', ')}
                           </span>
+                        )}
+                        {plays > 1 && (
+                          <span className="text-zinc-600 font-sans">×{plays}</span>
                         )}
                       </div>
                     ))}
